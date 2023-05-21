@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hero{
+    background-color: #F3FAF7;    
+}
+#aboutus-hero{
+    align-items: center;
+    text-align: left;
+}
+.element-heading-title{
+    font-size: 75px;
+	font-weight: 600;
+	letter-spacing: normal;
+	line-height: 75px;
+	text-decoration: none solid rgb(33, 33, 35);
+	text-align: start;
+	text-indent: 0px;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+    margin-top: 40px;
+}
+.element-heading-info{
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 30px;
+	text-decoration: none solid rgb(33, 33, 35);
+	text-align: start;
+	text-indent: 0px;
+	vertical-align: baseline;
+	word-spacing: 0px;
+}
+.myButton {
+	box-shadow: 0px 9px 14px -7px #14985C;
+	background-color:#14985C;
+	border-radius:5px;
+	border:1px solid #14985C;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 45px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #14985C;
+}
+.myButton:hover {
+	background-color:#14986C;
+    transform: scale(1.01);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+#sponsors{
+    min-height: 20vh;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: #14985C;
+}
+.card{
+    margin: 5px;
+    border: none;
+    background: #F3FAF7;
+}
+.services{
+    padding-top: 30px;
+}
+.service-img img{
+    width: 100%;
+    object-fit: contain;
+}
+.services-heading-title{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.service-1{
+    font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+	line-height: 30px;
+	text-decoration: none solid rgb(33, 33, 35);
+	text-align: start;
+	text-indent: 0px;
+	vertical-align: baseline;
+    padding-top: 7px;
+}
+.service-info{
+    font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	line-height: 22px;
+	text-decoration: none solid rgb(33, 33, 35);
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+}
+.read-more{
+    font-size: 14px;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 21px;
+	text-decoration: none solid rgb(20, 152, 92);
+    color: #14985C;
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+}
+#why_us h1{
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 25px;
+    padding: 30px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.why_us_header{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    align-items: center;
+}
+.why_us_header::before, .why_us_header::after{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: black;
+}
+.d-flex{
+    position: relative;
+    list-style-position: outside;
+}
+.d-flex p{
+    font-size: 15px;
+	font-weight: 300;
+	line-height: 22.5px;
+	text-decoration: none solid rgb(33, 33, 35);
+	text-align: left;
+    display: block;
+    padding-left: 4px;
+}
+.fas{
+    font-size: 14px;
+	font-weight: 400;
+	line-height: 22.5px;
+	text-align: left;
+	text-indent: 0px;
+    color: #14985C;
+    display: block;
+    padding: 3px;
+}
+.features{
+    padding-bottom: 40px;
+}
+#team{
+    background: white;
+    margin-top: 70px;
+}
+.team-title{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 15px;
+}
+.team-info{
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.board{
+    display: flex;
+}
+.ceo{
+    margin: 15px;    
+}
+.img-box{
+    display: inline-block;
+    overflow: hidden;
+    /* padding: 15px; */
+    border-radius: 15px;
+}
+.ceo-info{
+    display: flex;
+    flex-direction: column;
+}
+.ceo-desc{
+    font-size: 15px;
+    font-weight: 300;    
+}
+#testimonials{
+    margin-top: 80px;
+    padding-top: 20px;
+    position: relative;
+}
+.testimonials{
+    display: flex;
+}
+.testimony-text{
+    align-content: center;
+    text-align: left;
+    padding-right: 20px;
+}
