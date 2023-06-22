@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="assets/checkout.css">
+	<link rel="stylesheet" href="assets/styles.css" />
+	 <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Checkout</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fa-solid fa-shop me-2"></i>
+          <strong>My Store</strong>
+        </a>
+        <!-- Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
+          <div class="input-group">
+            <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" class="form-control border-warning"/>
+            <button class="btn btn-warning text-white">Search</button>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="ms-auto d-none d-lg-block">
+            <div class="input-group">
+              <span class="input-group-text bg-gray text-dark">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input type="text" class="form-control"/>
+              <button class="btn btn-dark">Search</button>
+            </div>
+          </div>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 " href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 " href="#">Services</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link mx-2 " href="contact_us.html">Contact Us</a>
+            </li>            
+          </ul>
+          <ul class="navbar-nav ms-auto"> 
+            <li class="nav-item">
+              <a class="nav-link mx-2 " href="cart.html"><i class="fa-solid fa-basket-shopping"></i><sup>2</sup> Cart</a>
+            </li>           
+            <li class="nav-item">
+              <a class="nav-link mx-2 " href="#"><i class="fa-solid fa-circle-user me-1"></i> Guest</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Checkout -->
+  <h1>Checkout</h1>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+           <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Total Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>
+                        <strong>Item 1</strong><br>
+                        Product Price: $10.00
+                      </td>
+                      <td>$15.00</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Item 2</strong><br>
+                        Product Price: $15.00
+                      </td>
+                      <td>$20.00</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Total: </strong>
+                      <td>$40.00</td>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="payment-options">
+                <h3>Payment Options</h3>
+                <label class="payment-option-label">
+                  <input type="radio" name="payment-option" value="direct-bank-transfer"
+                    onclick="showPaymentInstructions('direct-bank-transfer')">
+                  Direct Bank Transfer
+                </label>
+                <div class="payment-instructions" data-option="direct-bank-transfer">Make your payment directly into our bank
+                  account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have
+                  cleared in our account.<hr></div>
+                
+                <label class="payment-option-label">
+                  <input type="radio" name="payment-option" value="lipa-na-m-pesa"
+                    onclick="showPaymentInstructions('lipa-na-m-pesa')">
+                  Lipa na MPESA
+                </label>
+                <div class="payment-instructions" data-option="lipa-na-m-pesa">Kindly pay through Lipa na MPESA Paybill; Business
+                  Number 996488. After payment, kindly forward the Mpesa confirmation text to +254700449778.<hr></div>
+                
+                <label class="payment-option-label">
+                  <input type="radio" name="payment-option" value="cash-on-delivery"
+                    onclick="showPaymentInstructions('cash-on-delivery')">
+                  Cash on Delivery
+                </label>
+                <div class="payment-instructions" data-option="cash-on-delivery">Pay with cash upon delivery.<hr></div>
+            </div>
+            <div class="place-order">
+                <a href="#" class="checkout-btn">Place Order</a> 
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+  </div>
+	
+	<!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="full">
+              <div class="logo_footer">
+                <h3>Contact Us</h3>
+              </div>
+              <br>
+              <div class="information_footer">
+                <p><strong>ADDRESS:</strong> Old Mutual, Moi Avenue, KEN</p>
+                <p><strong>TELEPHONE:</strong> +2547 4554 8093</p>
+                <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                <p><strong>URL:</strong> www.mystore.co.ke</p>
+              </div>
+              <div class="open_time">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Monday</td>
+                      <td>0800 - 1700</td>
+                    </tr>
+                    <tr>
+                      <td>Tueday</td>
+                      <td>0800 - 1700</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>0800 - 1700</td>
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                      <td>0800 - 1700</td>
+                    </tr>
+                    <tr>
+                      <td>Friday</td>
+                      <td>0800 - 1700</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>0800 - 1500</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday</td>
+                      <td>Closed</td>
+                    </tr>                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="widget_menu">
+                      <h3>Quick Links</h3>                      
+                      <ul>
+                        <li><a href="#">Ubuquiti Suppliers</a></li>
+                        <li><a href="#">Fanvil Resellers</a></li>
+                        <li><a href="#">TP Link Equipment</a></li>
+                        <li><a href="#">Alarm Systems</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="widget_menu">
+                      <h3>Information</h3>
+                      <ul>
+                        <li><a href="#">General Terms and Conditions.</a></li>
+                        <li><a href="#">Privacy and Security Policy.</a></li>
+                        <li><a href="#">Delivery and Order Information.</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">My Account</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="widget_menu">
+                  <h3>Newsletter</h3>
+                    <div class="information_f">
+                      <p>Subscribe by our newsletter and get update protidin.</p>
+                    </div>
+                    <div class="form_sub">
+                      <form>
+                        <fieldset>
+                           <div class="field">
+                              <input type="email" placeholder="Enter Your Mail" name="email" />
+                              <input type="submit" value="Subscribe" />
+                           </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Copyright & Blog -->
+    <div class="cpy_">
+      <div class=" container quick-links">
+        <ul>
+          <li><a href="#">Networking Equipment</a></li>
+          <li><a href="#">Power & Electrical</a></li>
+          <li><a href="#">Security Systems</a></li>
+          <li><a href="#">Telephone System</a></li>
+          <li><a href="#">Computing Products & Electronics Products</a></li>
+        </ul>
+        <hr>
+      </div>
+      
+      <a href="#"><img class="footer_img" src="images/twitter.png" alt="..."></a>
+      <a href="#"><img class="footer_img" src="images/facebook.png" alt="..."></a>
+      <a href="#"><img class="footer_img" src="images/insta.png" alt="..."></a>
+      <p class="mx-auto">© 2023 All Rights Reserved.<br> My Store</p>
+    </div>
+
+    <!-- Js code to display no payment instruction -->
+    <script>
+    const paymentInstructions = document.querySelectorAll('.payment-instructions');
+    paymentInstructions.forEach(function (instructions) {
+    instructions.style.display = 'none';
+    });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="assets/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+h1 {
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th{
+    font-size: larger;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.payment-options {
+  margin-top: 20px;
+}
+.payment-option-label {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.checkout-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.checkout-btn:hover {
+  background-color: #45a049;
+}
+.place-order{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.payment-instructions{
+    padding: 5px;
+}
