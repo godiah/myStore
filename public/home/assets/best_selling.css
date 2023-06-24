@@ -6,6 +6,7 @@
   padding: 10px;
   margin-left: 2%;
   margin-right: 2%;
+  border-bottom: .8px solid #ddd;
 }
 .best-selling-product-container {
   padding: 0 10vw;

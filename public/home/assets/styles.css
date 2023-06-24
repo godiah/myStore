@@ -18,6 +18,10 @@ a {
   font-size: 13px;
   background-color: #fff !important;
 }
+.blog img{
+  width: 20px;
+  height: 20px;
+}
 
 .form-control {
   outline: none !important;
@@ -63,24 +67,6 @@ a {
   margin-right: 3px;
   padding: 2px;
 }
-
-/* .fa-facebook:hover{
-  transform: scale(1.12);
-  transition: all 0.3s ease-in-out;
-}
-
-.fa-instagram:hover{
-  transform: scale(1.12);
-  transition: all 0.3s ease-in-out;
-}
-
-.fa-whatsapp:hover{
-  transform: scale(1.12);
-  transition: all 0.3s ease-in-out;
-}
-.fa-brands:hover{
-  transform: scale(1.08);
-} */
 
 @media screen and (max-width: 540px) {
   .centerOnMobile {

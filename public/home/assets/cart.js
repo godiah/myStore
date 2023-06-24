@@ -14,7 +14,7 @@ for (let i = 0; i < deleteButtons.length; i++) {
 // JavaScript code for Cart Price Manipulation
   document.addEventListener('DOMContentLoaded', function () {
     const cartTable = document.getElementById('cart');
-    const quantityInputs = cartTable.getElementsByClassName('quantity-input');
+    const quantityInputs = cartTable.getElementsByClassName('cart-quantity-input');
     const subTotalCells = cartTable.getElementsByClassName('sub-total');
 
     function updateSubTotal() {
