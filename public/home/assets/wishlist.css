@@ -19,6 +19,7 @@
     width: 20px;
     height: 2px;
     margin-top: 10px;
+    margin-bottom: 15px;
     background-color: #ddd;
     position: absolute;
     left: 50%;
@@ -98,4 +99,42 @@
 .fa-cart-shopping{
     margin-right: 3px;
     padding-right: 2px;
+}
+
+/* ---- Media Queries ---- */
+
+/* == Extra Small Devices/Phones == */
+@media only screen and (max-width:599px){
+  .wishlist-item-buttons a{
+    width: 150px;
+  }
+  .wishlist-item-details h5{
+    font-size: 14px;
+    color: rgb(79, 79, 228);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .wishlist-item-details .price {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+/* == Small Devices/Potrait == */
+@media (min-width:600px) and (max-width:991px){
+  .wishlist-item-buttons a{
+    width: 150px;
+  }
+  .wishlist-item-details h5{
+    font-size: 14px;
+    color: rgb(79, 79, 228);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .wishlist-item-details .price {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 }

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="assets/styles.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/searchbar.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/main-navbar.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/shopping-cart.css"/>
-	  <!-- Font Awesome Icons -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="assets/shop_page.css">
+    <link rel="stylesheet" href="assets/searchbar.css"/>
+    <link rel="stylesheet" href="assets/main-navbar.css"/>
+	<link rel="stylesheet" href="assets/styles.css" />
+	 <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <title>Shopping Cart</title>
+    <title>Electronic Products</title>
 </head>
 <body>
     <!-- Super Navigation Bar -->    
@@ -277,158 +277,92 @@
       </div>
     </nav> 
 
-  <!-- Cart  -->
-  <div class="cart-title">
-    <h3>Shopping Cart</h3>
-  </div>
-  <div class="shop-cart">
-    <div class="shop-cart-items">
-      <table id="cart">
-        <thead>
-          <tr class="cart-heading">
-            <th></th>
-            <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-            <th>SUBTOTAL</th>            
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">              
-              <img class="item-image" src="images/product1.jpg" alt="Item Image">
-              <span>Fanvil X303P Enterprise IP Phone</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
+    <!-- My Shop -->    
+    <div class="online-shop-container">
+      <div>
+          <h3 class="online-title">Electronic Products</h3>
+      </div>
+      <div class="shop-about">
+        <p> MyStore is your number one Online Shopping solution. You can purchase all your Computer 
+            and Networking Accessorries, Computing Equipment, Electronics, TELEPHONE SYSTEM, Networking Equipment,
+            Power & Electrical, Security Systems , Telephone Systems and more online and have them delivered to you. 
+            MyStore has payment options that suit everyone, and we have a payment-on-delivery option for extra convenience. 
+            We are a trusted Computer shop in Nairobi, Kenya with express delivery countrywide and a proven track record on variety, 
+            best prices, speedy delivery and excellent service.
+        </p>
+      </div>
+      <div class="row">
+        <!-- Categories & Products-->
+        <div class="col-md-3">
+              <div class="categories">
+                  <h5 class="category-title">Categories</h5>
+                  <select>
+                    <option value="all">All Categories</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+                    <!-- Add more categories here -->
+                  </select>
               </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="images/hp.webp" alt="Item Image">
-              <span>ASUS Zenbook Pro Duo 15 OLED UX582ZM-H2901W, Intel Core i9 12900H, 32GB RAM, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
+              <div class="categories">
+                <h5 class="category-title">Product Categories</h5>
+                <div>
+                    <ul>
+                      <li><a href="#">Computing Products</a></li>
+                      <li><a href="#">Computing Products</a></li>
+                      <li><a href="#">Computing Products</a></li>
+                      <li><a href="#">Computing Products</a></li>
+                      <li><a href="#">Computing Products</a></li>
+                    </ul>
+                </div>                  
               </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="images/product1.jpg" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
+        </div>
+        <!-- Products -->
+        <div class="col-md-9">                
+              <div class="shop-container">
+                  <div class="product-cards">
+                    <div class="product-card">
+                      <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                      <h5>Fanvil X303P Enterprise IP Phone</h5>
+                      <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                      <p class="price">Ksh1,119.99</p>
+                      <a href="#" class="add-to-cart">Add to Cart</a>
+                    </div>                  
+                    <div class="product-card">
+                      <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                      <h5>Fanvil X303P Enterprise IP Phone</h5>
+                      <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                      <p class="price">Ksh1,119.99</p>
+                      <a href="#" class="add-to-cart">Add to Cart</a>
+                    </div>                  
+                    <div class="product-card">
+                      <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                      <h5>Fanvil X303P Enterprise IP Phone</h5>
+                      <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                      <p class="price">Ksh1,119.99</p>
+                      <a href="#" class="add-to-cart">Add to Cart</a>
+                    </div>
+                   <div class="product-card">
+                      <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                      <h5>Fanvil X303P Enterprise IP Phone</h5>
+                      <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                      <p class="price">Ksh1,119.99</p>
+                      <a href="#" class="add-to-cart">Add to Cart</a>
+                    </div>
+                   <div class="product-card">
+                      <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                      <h5>Fanvil X303P Enterprise IP Phone</h5>
+                      <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                      <p class="price">Ksh1,119.99</p>
+                      <a href="#" class="add-to-cart">Add to Cart</a>
+                    </div>
+                  
+                  </div>                    
               </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="images/product1.jpg" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="images/product1.jpg" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="images/product1.jpg" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>                   				
-        </tbody>
-      </table>
-      <div class="mt-4">
-        <a href="index.html" id="continue-shop-btn" class="continue-shop-btn"><i class="fa-solid fa-arrow-left"></i>Continue Shopping</a>
+        </div>
       </div>
     </div>
-    <div class="shop-cart-totals">
-      <table id="cart-totals">
-        <thead>
-          <tr>
-            <th class="cart-heading">CART TOTALS</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr >
-            <td class="cart-list">Subtotal</td>
-            <td class="tt"><strong>Ksh5,500.00</strong></td>
-          </tr>
-          <tr>
-            <td class="cart-list">Shipping</td>
-            <td class="tt"><strong>Ksh2,500.00</strong></td>
-          </tr>
-          <tr>
-            <td class="cart-list">16% VAT Tax</td>
-            <td class="tt"><strong>Ksh870.00</strong></td>
-          </tr>
-          <tr class="bottom">
-            <td class="cart-list">Total (incl tax)</td>
-            <td class="tt"><strong>Ksh7,500.00</strong></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="checkout-btn">
-        <a href="checkout.html" id="">Proceed to Checkout</a>
-      </div>      
-    </div>
-  </div>
-  	
+	
    <!-- Footer -->
   <footer>
     <div class="container">
@@ -501,28 +435,10 @@
     </div>   
     <p class="mx-auto">© 2023 All Rights Reserved.<br> My Store</p>
   </div>
-
-    <script>
-      const plus = document.querySelector(".plus"),
-      minus = document.querySelector(".minus"),
-      num = document.querySelector(".num");
-      let a = 1;
-      plus.addEventListener("click", ()=>{
-        a++;
-        a = (a < 10) ? "" + a : a;
-        num.innerText = a;
-      });
-      minus.addEventListener("click", ()=>{
-        if(a > 1){
-          a--;
-          a = (a < 10) ? "" + a : a;
-          num.innerText = a;
-        }
-      });
-    </script>
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script src="assets/cart.js"></script>
+    <script src="#></script>
 </body>
 </html>

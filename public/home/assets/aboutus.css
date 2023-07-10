@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 #hero{
+    margin-left: 2%;
+    margin-right: 2%;
     background-color: #F3FAF7;    
 }
 #aboutus-hero{
@@ -37,7 +39,6 @@
 	box-shadow: 0px 9px 14px -7px #14985C;
 	background-color:#14985C;
 	border-radius:5px;
-	border:1px solid #14985C;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -56,8 +57,10 @@
 	top:1px;
 }
 #sponsors{
+    margin-left: 2%;
+    margin-right: 2%;
     min-height: 20vh;
-    padding-top: 10px;
+    padding-top: 2%;
     padding-bottom: 40px;
     background-color: #14985C;
 }
@@ -77,6 +80,8 @@
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .service-1{
     font-size: 18px;
@@ -160,13 +165,25 @@
     padding-bottom: 40px;
 }
 #team{
-    background: white;
-    margin-top: 70px;
+    background: #F3FAF7;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .team-title{
     font-size: 50px;
     font-weight: 600;
-    margin: 15px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.team-title::after{
+    content:"";
+    background-color: #000;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 50%;
 }
 .team-info{
     font-size: 15px;
@@ -175,15 +192,18 @@
 }
 .board{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .ceo{
     margin: 15px;    
 }
 .img-box{
-    display: inline-block;
-    overflow: hidden;
-    /* padding: 15px; */
-    border-radius: 15px;
+
+}
+.img-box img{
+    width: 100%;
+    
 }
 .ceo-info{
     display: flex;
@@ -194,12 +214,17 @@
     font-weight: 300;    
 }
 #testimonials{
-    margin-top: 80px;
-    padding-top: 20px;
-    position: relative;
+    background: #F3FAF7;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #ddd;
 }
 .testimonials{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .testimony-text{
     align-content: center;

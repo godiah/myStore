@@ -109,7 +109,7 @@
 }
 .btn-save{
   font-size: 16px;
-	background-color:#e4685d;
+	background-color:#F0122D;
 	border-radius:4px;
 	border:1px solid #ffffff;
 	display:inline-block;
@@ -208,4 +208,60 @@ td{
 }
 .fa-less-than{
   margin-right: 7px;
+}
+
+/* ---- Media Queries ---- */
+
+/* == Extra Small Devices/Phones == */
+@media only screen and (max-width:599px){
+  .checkout-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-bottom: 2%;
+  }
+  .user-details{
+    width: 100%;
+  }
+  .order-summary{
+    width: 100%;
+  }
+}
+
+/* == Small Devices/Potrait == */
+@media (min-width:600px) and (max-width:767px){
+  .checkout-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-bottom: 2%;
+  }
+  .user-details{
+    width: 100%;
+  }
+  .order-summary{
+    width: 100%;
+  }
+}
+
+/* == Medium Devices/Landscacpe == */
+@media (min-width:768px) and (max-width:991px){
+  .checkout-details{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-bottom: 2%;
+  }
+  .user-details{
+    width: 100%;
+  }
+  .order-summary{
+    width: 100%;
+  }
 }

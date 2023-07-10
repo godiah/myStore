@@ -10,93 +10,151 @@
     <link rel="stylesheet" href="assets/main-navbar.css"/>
 	  <link rel="stylesheet" href="assets/styles.css" />
 	 <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Shop</title>
 </head>
 <body>
     <!-- Super Navigation Bar -->
-    <div class="superNav border-bottom py-2 bg-light">
-      <div class="container">
+    <div class="superNav border-bottom py-2 bg-light sticky-top">
+      <div class="container-super-nav">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
-            <span  class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3">
-              <strong>info@somedomain.com</strong>
+            <span class="">
+              <strong><a href="#" class="abt">info@somedomain.com</a></strong>
             </span>
-            <span class="me-3">
+            <span class="tel-no">
               <i class="fa-solid fa-phone"></i>
-              <strong>+2547 4554 8093</strong>
+              <strong><a href="#" style="text-decoration: none; color: #f9d2e0; text-align: center;">+2547 4554 8093</a></strong>
             </span>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block text-end">
             <span class="me-3" id="about_vertical">
-              <a class="text-muted text-decoration-none" href="aboutus.html">About Us</a>
+              <a class="abt" href="aboutus.html" >About Us</a>
             </span>
-            <span class="blog"><a href="#"><img src="images/blo-facebook.png" alt="facebook"></a></span>
-            <span class="blog"><a href="#"><img src="images/blog-instagram.png" alt=""></a></span>
-            <span class="blog"><a href="#"><img src="images/blog-whatsapp.png" alt=""></a></span>
+            <!-- Blog -->
+            <span class="blog"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></span>
+            <span class="blog"><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+            <span class="blog"><a href="#"><i class="fa-brands fa-whatsapp"></i></span>
           </div>
         </div>
       </div>
     </div>
 
-        <!-- Logo, Search Bar Log In & Cart  -->
-    <div class="" id="header-1">
-        <!-- Logo -->
-        <div class="logo-container">
+    <!-- Logo, Search Bar Log In & Cart  -->
+    <div class="logo-search" id="header-1">
+      <!-- <div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div> -->
+      <div class="sm-menu-btn">
+        <a href="#" class="cart-sm d-xl-none d-lg-none d-md-none">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </a>
+      </div>
+      <!-- Logo -->
+      <div class="logo-container">
           <a class="logo-brand" href="index.html">
             <i class="fa-solid fa-shop me-2"></i>
             <strong>My Store</strong>
           </a>
-        </div>
-        <!-- Search Bar -->
-        <div class="InputContainer">
-          <input type="text" name="text" class="input" id="input" placeholder="Search">  
+      </div>
+      <!-- Search Bar -->
+      <div class="InputContainer">
+          <input type="text" name="text" class="input" id="input" placeholder="Search...">  
           <label for="input" class="labelforsearch">
             <svg viewBox="0 0 512 512" class="searchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
-          </label>
-          <div class="border"></div>
-          <button class="micButton">
-            <svg viewBox="0 0 384 512" class="micIcon"><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"></path></svg>
-          </button>
+          </label>          
+      </div>
+      <!-- Log In & Cart  -->
+      <div class="log-in-container"> 
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>Account
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item hm-sgn-in" href="#">Sign In</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
+            <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
+          </ul>
         </div>
-        <!-- Log In & Cart  -->
-        <div class="log-in-container">
-            <a href="./users/sign_in.html">Login</a>
-          <div class="border-login"></div>
-          <a href="cart.html"><i class="fa-solid fa-cart-shopping mr-1"></i><sup>2</sup> Cart/Ksh0.00</a>
-        </div>
+        <div class="border-login"></div>
+        <a href="cart.html"><i class="crt fa-solid fa-cart-shopping"></i><sup>2</sup> Cart/Ksh0.00</a>          
+      </div>
+      <div>
+        <a href="cart.html" class="cart-sm d-xl-none d-lg-none d-md-none"><i class="fa-solid fa-cart-shopping mx-1"></i><sup>1</sup></a>
+      </div>
     </div>
 
     <!-- Main Navigation Bar -->
-    <nav>
+    <nav class="sticky-nav">
       <div class="wrapper">
         <input type="radio" name="slider" id="menu-btn">
         <input type="radio" name="slider" id="close-btn">
         <ul class="nav-links">
-          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <!-- <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label> -->
           <li><a href="shop_page.html">Shop</a></li>
+          <!-- Computer Accesories -->
           <li>
-          <a href="#" class="desktop-item">Accesories</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Accesories</label>
-          <div class="mega-box">
+            <a href="shop_accessories.html" class="desktop-item">Accesories <i class="fa-solid fa-caret-down"></i></a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Accesories</label>
+            <div class="mega-box">
             <div class="content">
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" class="mx-3" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#" class="mx-3">Headphones</a></li>
-                  <li><a href="#" class="mx-3">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-3">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-3">Webcam</a></li>
-                  <li><a href="#" class="mx-3">VGA Cables</a></li>
+                  <li><a href="#" class="mx-4" id="row-header"><b>Computer Accesories</b></a></li>
+                  <li><a href="#" class="mx-4">Headphones</a></li>
+                  <li><a href="#" class="mx-4">Laptop Chargers</a></li>
+                  <li><a href="#" class="mx-4">Laptop Batteries</a></li>
+                  <li><a href="#" class="mx-4">Webcam</a></li>
+                  <li><a href="#" class="mx-4">VGA Cables</a></li>
                 </ul>
               </div>
               <div class="row">
                 <ul class="mega-links">
                   <li><a href="#" id="row-header"><b>Storage</b></a></li>
+                  <li><a href="#">Flash Drives</a></li>
+                  <li><a href="#">Memory Cards</a></li>
+                  <li><a href="#">Internal Hard Disk HDD</a></li>
+                  <li><a href="#">Solid State Devices SSD</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <ul class="mega-links">
+                  <li><a href="#" id="row-header"><b>Network Accesories</b></a></li>
+                  <li><a href="#">Patch Panel</a></li>                  
+                </ul>
+              </div>
+              <div class="row">
+                <ul class="mega-links">
+                  <li><a href="#">USB Cables</a></li>
+                  <li><a href="#">HDMI</a></li>
+                  <li><a href="#">Surge Protector</a></li>
+                  <li><a href="#">Speakers</a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </li>
+          <!-- Computing -->
+          <li>
+            <a href="shop_computing.html" class="desktop-item">Computing <i class="fa-solid fa-caret-down"></i></a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Computing</label>
+            <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <ul class="mega-links">
+                  <li><a href="#" class="mx-4" id="row-header"><b>Laptops</b></a></li>
+                  <li><a href="#" class="mx-4">DELL Laptops</a></li>
+                  <li><a href="#" class="mx-4">HP Laptops</a></li>
+                  <li><a href="#" class="mx-4">Lenovo Laptops</a></li>
+                  <li><a href="#" class="mx-4">Asus Laptops</a></li>
+                  <li><a href="#" class="mx-4">Refurbished Laptops</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <ul class="mega-links">
+                  <li><a href="#" id="row-header"><b>Desktop Computers</b></a></li>
                   <li><a href="#">Flash Drives</a></li>
                   <li><a href="#">Memory Cards</a></li>
                   <li><a href="#">Memory Cards</a></li>
@@ -105,7 +163,7 @@
               </div>
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Computer Accesories</b></a></li>
+                  <li><a href="#" id="row-header"><b>Printers & Scanners</b></a></li>
                   <li><a href="#">Flash Drives</a></li>
                   <li><a href="#">Memory Cards</a></li>
                   <li><a href="#">Solid State Devices SSD</a></li>
@@ -120,27 +178,28 @@
                 </ul>
               </div>
             </div>
-          </div>
+            </div>
           </li>
+          <!-- Electronics -->
           <li>
-          <a href="#" class="desktop-item">Computing</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Accesories</label>
-          <div class="mega-box">
+            <a href="shop_electronics.html" class="desktop-item">Electronics <i class="fa-solid fa-caret-down"></i></a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Electronics</label>
+            <div class="mega-box">
             <div class="content">
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" class="mx-3" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#" class="mx-3">Headphones</a></li>
-                  <li><a href="#" class="mx-3">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-3">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-3">Webcam</a></li>
-                  <li><a href="#" class="mx-3">VGA Cables</a></li>
+                  <li><a href="#" class="mx-4" id="row-header"><b>Cameras</b></a></li>
+                  <li><a href="#" class="mx-4">Headphones</a></li>
+                  <li><a href="#" class="mx-4">Laptop Chargers</a></li>
+                  <li><a href="#" class="mx-4">Laptop Batteries</a></li>
+                  <li><a href="#" class="mx-4">Webcam</a></li>
+                  <li><a href="#" class="mx-4">VGA Cables</a></li>
                 </ul>
               </div>
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Storage</b></a></li>
+                  <li><a href="#" id="row-header"><b>TVs</b></a></li>
                   <li><a href="#">Flash Drives</a></li>
                   <li><a href="#">Memory Cards</a></li>
                   <li><a href="#">Memory Cards</a></li>
@@ -149,7 +208,7 @@
               </div>
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Computer Accesories</b></a></li>
+                  <li><a href="#" id="row-header"><b>Mobile Phones</b></a></li>
                   <li><a href="#">Flash Drives</a></li>
                   <li><a href="#">Memory Cards</a></li>
                   <li><a href="#">Solid State Devices SSD</a></li>
@@ -164,27 +223,28 @@
                 </ul>
               </div>
             </div>
-          </div>
+            </div>
           </li>
+          <!--  Networking -->
           <li>
-          <a href="#" class="desktop-item">Electronics</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Accesories</label>
-          <div class="mega-box">
+            <a href="shop_networking.html" class="desktop-item">Networking <i class="fa-solid fa-caret-down"></i></a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Networking</label>
+            <div class="mega-box">
             <div class="content">
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" class="mx-3" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#" class="mx-3">Headphones</a></li>
-                  <li><a href="#" class="mx-3">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-3">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-3">Webcam</a></li>
-                  <li><a href="#" class="mx-3">VGA Cables</a></li>
+                  <li><a href="#" class="mx-4" id="row-header"><b>TP Link</b></a></li>
+                  <li><a href="#" class="mx-4">Headphones</a></li>
+                  <li><a href="#" class="mx-4">Laptop Chargers</a></li>
+                  <li><a href="#" class="mx-4">Laptop Batteries</a></li>
+                  <li><a href="#" class="mx-4">Webcam</a></li>
+                  <li><a href="#" class="mx-4">VGA Cables</a></li>
                 </ul>
               </div>
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Storage</b></a></li>
+                  <li><a href="#" id="row-header"><b>Tenda</b></a></li>
                   <li><a href="#">Flash Drives</a></li>
                   <li><a href="#">Memory Cards</a></li>
                   <li><a href="#">Memory Cards</a></li>
@@ -193,7 +253,7 @@
               </div>
               <div class="row">
                 <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Computer Accesories</b></a></li>
+                  <li><a href="#" id="row-header"><b>DP Link</b></a></li>
                   <li><a href="#">Flash Drives</a></li>
                   <li><a href="#">Memory Cards</a></li>
                   <li><a href="#">Solid State Devices SSD</a></li>
@@ -208,315 +268,172 @@
                 </ul>
               </div>
             </div>
-          </div>
-          </li>
-          <li>
-          <a href="#" class="desktop-item">Networking</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Accesories</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" class="mx-3" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#" class="mx-3">Headphones</a></li>
-                  <li><a href="#" class="mx-3">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-3">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-3">Webcam</a></li>
-                  <li><a href="#" class="mx-3">VGA Cables</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Storage</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">USB Cables</a></li>
-                  <li><a href="#">HDMI</a></li>
-                  <li><a href="#">Surge Protector</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
             </div>
-          </div>
           </li>
-          <li>
-          <a href="#" class="desktop-item">Accesories</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Accesories</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" class="mx-3" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#" class="mx-3">Headphones</a></li>
-                  <li><a href="#" class="mx-3">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-3">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-3">Webcam</a></li>
-                  <li><a href="#" class="mx-3">VGA Cables</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Storage</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">USB Cables</a></li>
-                  <li><a href="#">HDMI</a></li>
-                  <li><a href="#">Surge Protector</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          </li>
+          <!-- Contact Us -->
           <li><a href="contact_us.html">Contact Us</a></li>           
         </ul>
-        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        <!-- <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label> -->
       </div>
-    </nav>
+    </nav> 
 
-    <!-- My Shop -->
-    <section>
-        <div class="container mt-4">
-            <h3>Online Shopping</h3>
+    <!-- My Shop -->    
+    <div class="online-shop-container">
+      <div>
+          <h3 class="online-title">Online Shopping</h3>
+      </div>
+      <div class="shop-about">
+        <p> MyStore is your number one Online Shopping solution. You can purchase all your Computer 
+            and Networking Accessorries, Computing Equipment, Electronics, TELEPHONE SYSTEM, Networking Equipment,
+            Power & Electrical, Security Systems , Telephone Systems and more online and have them delivered to you. 
+            MyStore has payment options that suit everyone, and we have a payment-on-delivery option for extra convenience. 
+            We are a trusted Computer shop in Nairobi, Kenya with express delivery countrywide and a proven track record on variety, 
+            best prices, speedy delivery and excellent service.
+        </p>
+      </div>
+      <div class="row">
+        <!-- Categories & Products-->
+        <div class="col-md-3">
+          <div class="categories">
+              <h5 class="category-title">Categories</h5>
+              <select>
+                    <option value="all">All Categories</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+              </select>
+          </div>
+          <div class="categories">
+            <h5 class="category-title">Product Categories</h5>
+            <div>
+              <ul>
+                <li><a href="#">Computing Products</a></li>
+                <li><a href="#">Computing Products</a></li>
+                <li><a href="#">Computing Products</a></li>
+                <li><a href="#">Computing Products</a></li>
+                <li><a href="#">Computing Products</a></li>
+              </ul>
+            </div>                  
+          </div>
         </div>
-    </section>
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <!-- Categories & Products-->
-            <div class="col-md-2">
-                <div class="categories">
-                    <h6>Categories</h6>
-                    <select>
-                      <option value="all">All Categories</option>
-                      <option value="category1">Category 1</option>
-                      <option value="category2">Category 2</option>
-                      <option value="category3">Category 3</option>
-                      <!-- Add more categories here -->
-                    </select>
+        <!-- Products -->
+        <div class="col-md-9">                
+          <div class="shop-container">
+              <div class="product-cards">
+                <div class="product-card">
+                  <a href="product_details.html"><img src="images/hp2.png" alt="Product Image"></a>
+                  <h5>Fanvil X303P Enterprise IP Phone</h5>
+                  <p class="p-desc"><a href="product_details.html">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                  <p class="price">Ksh1,119.99</p>
+                  <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>                  
+                <div class="product-card">
+                  <a href="product_details.html"><img src="images/product3.png" alt="Product Image"></a>
+                  <h5>Fanvil X303P Enterprise IP Phone</h5>
+                  <p class="p-desc"><a href="product_details.html">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                  <p class="price">Ksh1,119.99</p>
+                  <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>                  
+                <div class="product-card">
+                  <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                  <h5>Fanvil X303P Enterprise IP Phone</h5>
+                  <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                  <p class="price">Ksh1,119.99</p>
+                  <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
-                <div class="categories">
-                    <h6>Product Categories</h6>
-                    <div>
-                        <ul>
-                            <li><a href="#">Computing</a></li>
-                            <li><a href="#">Computing</a></li>
-                            <li><a href="#">Computing</a></li>
-                            <li><a href="#">Computing</a></li>
-                            <li><a href="#">Computing</a></li>
-                        </ul>
-                    </div>
-                    
+               <div class="product-card">
+                  <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                  <h5>Fanvil X303P Enterprise IP Phone</h5>
+                  <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                  <p class="price">Ksh1,119.99</p>
+                  <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
-            </div>
-            <!-- Products -->
-            <div class="col-md-10">
-                <div class="shop-about">
-                    <p>MyStore is your number one Online Shopping solution. You can purchase all your Computer 
-                        and Networking Accessorries, Computing Equipment, Electronics, TELEPHONE SYSTEM, Networking Equipment,
-                        Power & Electrical, Security Systems , Telephone Systems and more online and have them delivered to you. 
-                        MyStore has payment options that suit everyone, and we have a payment-on-delivery option for extra convenience. 
-                        We are a trusted Computer shop in Nairobi, Kenya with express delivery countrywide and a proven track record on variety, 
-                        best prices, speedy delivery and excellent service.</p>
+               <div class="product-card">
+                  <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
+                  <h5>Fanvil X303P Enterprise IP Phone</h5>
+                  <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                  <p class="price">Ksh1,119.99</p>
+                  <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
-                <div class="shop-container">
-                    <div class="product-cards">
-                      <div class="product-card">
-                        <a href="product_details.html"><img src="images/product1.jpg" alt="Product Image"></a>
-                        <h5>Product 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="price">19.99</p>
-                        <a href="#" class="add-to-cart">Add to Cart</a>
-                      </div>
-                  
-                      <div class="product-card">
-                        <img src="images/product1.jpg" alt="Product Image">
-                        <h5>Product 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="price">19.99</p>
-                        <a href="#" class="add-to-cart">Add to Cart</a>
-                      </div>
-                  
-                      <div class="product-card">
-                        <img src="images/product1.jpg" alt="Product Image">
-                        <h5>Product 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="price">19.99</p>
-                        <a href="#" class="add-to-cart">Add to Cart</a>
-                      </div>
-                     <div class="product-card">
-                        <img src="images/product1.jpg" alt="Product Image">
-                        <h5>Product 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="price">19.99</p>
-                        <a href="#" class="add-to-cart">Add to Cart</a>
-                      </div>
-                     <div class="product-card">
-                        <img src="images/product1.jpg" alt="Product Image">
-                        <h5>Product 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="price">19.99</p>
-                        <a href="#" class="add-to-cart">Add to Cart</a>
-                      </div>
-                    <!-- Add more product cards here -->
-                    </div>                    
-                </div>
-            </div>
+              
+              </div>                    
+          </div>
         </div>
+      </div>
     </div>
 	
-	    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="full">
-              <div class="logo_footer">
-                <h3>Contact Us</h3>
-              </div>
-              <br>
-              <div class="information_footer">
-                <p><strong>ADDRESS:</strong> Old Mutual, Moi Avenue, KEN</p>
-                <p><strong>TELEPHONE:</strong> +2547 4554 8093</p>
-                <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
-                <p><strong>URL:</strong> www.mystore.co.ke</p>
-              </div>
-              <div class="open_time">
-                <table class="table">
-                  <tbody>
-                    <tr>
-                      <td>Monday</td>
-                      <td>0800 - 1700</td>
-                    </tr>
-                    <tr>
-                      <td>Tueday</td>
-                      <td>0800 - 1700</td>
-                    </tr>
-                    <tr>
-                      <td>Wednesday</td>
-                      <td>0800 - 1700</td>
-                    </tr>
-                    <tr>
-                      <td>Thursday</td>
-                      <td>0800 - 1700</td>
-                    </tr>
-                    <tr>
-                      <td>Friday</td>
-                      <td>0800 - 1700</td>
-                    </tr>
-                    <tr>
-                      <td>Saturday</td>
-                      <td>0800 - 1500</td>
-                    </tr>
-                    <tr>
-                      <td>Sunday</td>
-                      <td>Closed</td>
-                    </tr>                    
-                  </tbody>
-                </table>
-              </div>
+   <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="full">
+            <div class="logo_footer">
+              <h3>Contact Us</h3>
             </div>
+            <br>
+            <div class="information_footer">
+              <p><strong>ADDRESS:</strong> Old Mutual, Moi Avenue, KEN</p>
+              <p><strong>TELEPHONE:</strong> +2547 4554 8093</p>
+              <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+              <p><strong>URL:</strong> www.mystore.co.ke</p>
+            </div>            
           </div>
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-7">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="widget_menu">
-                      <h3>Quick Links</h3>                      
-                      <ul>
-                        <li><a href="#">Ubuquiti Suppliers</a></li>
-                        <li><a href="#">Fanvil Resellers</a></li>
-                        <li><a href="#">TP Link Equipment</a></li>
-                        <li><a href="#">Alarm Systems</a></li>
-                      </ul>
-                    </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="widget_menu">
+                    <h3>Quick Links</h3>                      
+                    <ul>
+                      <li><a href="#">HP Laptops</a></li>
+                      <li><a href="#">Mobile Phones</a></li>
+                      <li><a href="#">TP Link Equipment</a></li>
+                      <li><a href="shop_accessories.html">Accesories</a></li>
+                    </ul>
                   </div>
-                  <div class="col-md-6">
-                    <div class="widget_menu">
-                      <h3>Information</h3>
-                      <ul>
-                        <li><a href="#">General Terms and Conditions.</a></li>
-                        <li><a href="#">Privacy and Security Policy.</a></li>
-                        <li><a href="#">Delivery and Order Information.</a></li>
-                        <li><a href="#">Return Policy</a></li>
-                        <li><a href="#">My Account</a></li>
-                      </ul>
-                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="widget_menu">
+                    <h3>Information</h3>
+                    <ul>
+                      <li><a href="#">General Terms and Conditions.</a></li>
+                      <li><a href="#">Privacy and Security Policy.</a></li>
+                      <li><a href="#">Delivery and Order Information.</a></li>
+                      <li><a href="#">Return Policy</a></li>
+                      <li><a href="aboutus.html">About Us</a></li>
+                      <li><a href="#">My Account</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
-                <div class="widget_menu">
-                  <h3>Newsletter</h3>
-                    <div class="information_f">
-                      <p>Subscribe by our newsletter and get update protidin.</p>
-                    </div>
-                    <div class="form_sub">
-                      <form>
-                        <fieldset>
-                           <div class="field">
-                              <input type="email" placeholder="Enter Your Mail" name="email" />
-                              <input type="submit" value="Subscribe" />
-                           </div>
-                        </fieldset>
-                      </form>
-                    </div>
-                  </div>
-              </div>
             </div>
+            <div class="col-md-2"></div>
           </div>
         </div>
       </div>
-    </footer>
-
-    <!-- Copyright & Blog -->
-    <div class="cpy_">
-      <div class=" container quick-links">
-        <ul>
-          <li><a href="#">Networking Equipment</a></li>
-          <li><a href="#">Power & Electrical</a></li>
-          <li><a href="#">Security Systems</a></li>
-          <li><a href="#">Telephone System</a></li>
-          <li><a href="#">Computing Products & Electronics Products</a></li>
-        </ul>
-        <hr>
-      </div>
-      
-      <a href="#"><img class="footer_img" src="images/twitter.png" alt="..."></a>
-      <a href="#"><img class="footer_img" src="images/facebook.png" alt="..."></a>
-      <a href="#"><img class="footer_img" src="images/insta.png" alt="..."></a>
-      <p class="mx-auto">© 2023 All Rights Reserved.<br> My Store</p>
     </div>
+  </footer>
+
+  <!-- Copyright & Blog -->
+  <div class="cpy_">
+    <div class="quick-links">
+      <ul>
+        <li><a href="shop_networking.html">Networking Equipment</a></li>
+        <li><a href="shop_accessories.html">Accesories</a></li>
+        <li><a href="shop_computing.html">Computing Products </a></li>
+        <li><a href="shop_electronics.html">Electronics Products </a></li>
+      </ul>
+    </div>   
+    <div class="footer-img">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>   
+    <p class="mx-auto">© 2023 All Rights Reserved.<br> My Store</p>
+  </div>
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

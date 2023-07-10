@@ -1,11 +1,9 @@
 nav{
   position: sticky;
   z-index: 99;
-  /* width: 100%;   */
-  background: #242526;
+  background: #000;
   margin-left: 2%;
   margin-right: 2%;
-  
 }
 ul{
   margin-bottom: 0 !important;
@@ -13,7 +11,6 @@ ul{
 nav .wrapper{
   position: relative;
   padding: 0px 30px;
-  /* line-height: 70px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,13 +22,15 @@ nav .wrapper{
 }
 .nav-links li{
   list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .nav-links li a{
-  color: #f2f2f2;
+  color: #f9d2e0;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  padding: 9px 15px;
+  padding: 10px 15px;
   transition: all 0.3s ease ease-in-out;
 }
 .nav-links li a:hover{
@@ -69,16 +68,16 @@ nav .wrapper{
   left: 0;
   width: 100%;
   padding: 0 30px;
-  /* top: 85px; */
   opacity: 0;
   visibility: hidden;
 }
 .mega-box .content{
-  background: #242526;
+  background: #fff;
   padding: 25px 20px;
   display: flex;
   width: 100%;
   justify-content: space-between;
+    border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 .mega-box .content .row{
@@ -86,26 +85,38 @@ nav .wrapper{
   line-height: 45px;
 }
 #row-header{
-  color: #f2f2f2;
+  color: #000;
   font-size: 15px;
-  font-weight: 500; 
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative; 
+}
+#row-header::after{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+
 }
 .content .row .mega-links{
   margin-left: -40px;
-  border-left: 1px solid rgba(255,255,255,0.09);
+  border-left: 1px solid #ddd;
 }
 .row .mega-links li{
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .row .mega-links li a{
   padding: 0px;
-  padding: 0 10px;  
-  color: #d9d9d9;
+  padding: 0 5px;  
+  color: #2e2c2c;
+  font-weight: 500;
   font-size: 14px;
   display: block;
 }
 .row .mega-links li a:hover{
-  color: #f2f2f2;
+  color: #000;
 }
 .wrapper .btn{
   color: #fff;
@@ -119,9 +130,11 @@ nav .wrapper{
   top: 10px;
 }
 
+
 @media screen and (max-width: 970px) {
   .wrapper .btn{
     display: block;
+    opacity: .7;
   }
   .wrapper .nav-links{
     position: fixed;
