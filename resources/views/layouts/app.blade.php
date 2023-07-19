@@ -80,22 +80,43 @@
       <div class="log-in-container"> 
         <div class="dropdown">
             @auth
+                @if(Auth::user()->utype=='ADM')
+                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i>{{Auth::user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <a class="dropdown-item hm-sgn-in" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Log out</a>
+                            </form>
+                        </li>
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user"></i>Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Products</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Categories</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Customers</a></li>
+                        <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
+                    </ul>
+                @else
                 <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-user"></i>{{Auth::user()->name}}
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <form action="{{route('logout')}}" method="post">
-                            @csrf
-                            <a class="dropdown-item hm-sgn-in" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Log out</a>
-                        </form>
-                    </li>
-                    <li><a class="dropdown-item hm-sgn-in" href="{{route('register')}}">Register</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
-                    <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
-                </ul>
+                    <i class="fa-solid fa-user"></i>{{Auth::user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <a class="dropdown-item hm-sgn-in" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Log out</a>
+                            </form>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{route('user.dashboard')}}"><i class="fa-solid fa-user"></i>My Account</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
+                        <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
+                    </ul>
+                @endif
             @else
 
                 <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -105,7 +126,7 @@
                     <li><a class="dropdown-item hm-sgn-in" href="{{route('login')}}">Sign In</a></li>
                     <li><a class="dropdown-item hm-sgn-in" href="{{route('register')}}">Register</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i>My Account</a></li>
+                    <!-- <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i>My Account</a></li> -->
                     <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
                     <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
                 </ul>

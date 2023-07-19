@@ -7,6 +7,11 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 
+use App\Http\Livewire\User\UserDashboardComponent;
+
+use App\Http\Livewire\Admin\AdminDashboardComponent;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,9 +33,19 @@ Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+// User Group routes
+Route::middleware(['auth'])->group(function(){
+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+});
+
+// Admin group routes
+Route::middleware(['auth','authadmin'])->group(function(){
+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
