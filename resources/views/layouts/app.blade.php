@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{asset('css/shop_page.css')}}">
     <link rel="stylesheet" href="{{asset('css/shopping-cart.css')}}">
     <link rel="stylesheet" href="{{asset('css/wishlist.css')}}">
+    <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
+
 
 
     <!-- Font Awesome Icons -->
@@ -64,7 +66,7 @@
       </div>
       <!-- Logo -->
       <div class="logo-container">
-          <a class="logo-brand" href="index.html">
+          <a class="logo-brand" href="/">
             <i class="fa-solid fa-shop me-2"></i>
             <strong>My Store</strong>
           </a>
@@ -147,7 +149,7 @@
         <input type="radio" name="slider" id="close-btn">
         <ul class="nav-links">
           <!-- <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label> -->
-          <li><a href="shop_page.html">Shop</a></li>
+          <li><a href="{{route('shop')}}">Shop</a></li>
           <!-- Computer Accesories -->
           <li>
             <a href="shop_accessories.html" class="desktop-item">Accesories <i class="fa-solid fa-caret-down"></i></a>
