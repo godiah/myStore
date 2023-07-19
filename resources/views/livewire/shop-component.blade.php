@@ -56,7 +56,7 @@
                     <h5>{{$product->name}}</h5>
                     <p class="p-desc"><a href="product_details.html">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
                     <p class="price">{{$product->regular_price}}</p>
-                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <a href="#" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" class="add-to-cart">Add to Cart</a>
                     </div>  
                 @endforeach
 

@@ -12,27 +12,32 @@
             <th>PRODUCT</th>
             <th>PRICE</th>
             <th>QUANTITY</th>
-            <th>SUBTOTAL</th>            
+            <th>SUBTOTAL</th> 
+            <th>REMOVE</th>           
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">              
-              <img class="item-image" src="{{asset('images/product1.jpg')}}" alt="Item Image">
-              <span>Fanvil X303P Enterprise IP Phone</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
+          @if(Cart::count()>0)
+            <tr>
+              <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
+              <td class="item-name">              
+                <img class="item-image" src="{{asset('images/product1.jpg')}}" alt="Item Image">
+                <span>Fanvil X303P Enterprise IP Phone</span>
+              </td>
+              <td class="item-price"><strong>Ksh5,500.00</strong></td>
+              <td>
+                <div class="cart-quantity">
+                  <span class="minus"> - </span>
+                  <span class="num"> 1 </span>
+                  <span class="plus"> + </span>
+                </div>
+              </td>
+              <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
+            </tr>
+          @else
+            <div><p>No items in your cart</p></div>
+          @endif
+          <!-- <tr>
             <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
             <td class="item-name">
               <img class="item-image" src="{{asset('images/hp.webp')}}" alt="Item Image">
@@ -47,71 +52,7 @@
               </div>
             </td>
             <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="{{asset('images/product1.jpg')}}" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="{{asset('images/product1.jpg')}}" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="{{asset('images/product1.jpg')}}" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>
-          <tr>
-            <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-            <td class="item-name">
-              <img class="item-image" src="{{asset('images/product1.jpg')}}" alt="Item Image">
-              <span>Asus Rog Strix Scar 15 G533 G533ZM-LN139W, Intel Core i9 12900H, 32GB Ram, 1TB SSD</span>
-            </td>
-            <td class="item-price"><strong>Ksh5,500.00</strong></td>
-            <td>
-              <div class="cart-quantity">
-                <span class="minus"> - </span>
-                <span class="num"> 1 </span>
-                <span class="plus"> + </span>
-              </div>
-            </td>
-            <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-          </tr>                   				
+          </tr>                   				 -->
         </tbody>
       </table>
       <div class="mt-4">
