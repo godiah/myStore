@@ -28,7 +28,7 @@ class ProductFactory extends Factory
             'regular_price'=> $this->faker->numberBetween(5000,100000),
             'stock_status'=>'instock',
             'quantity'=>$this->faker->numberBetween(10,50),
-            'image'=>'product-'.$this->faker->numberBetween(1,5),
+            'image'=>$this->faker->numberBetween(1,5),
             'category_id'=>$this->faker->numberBetween(1,5)
 
         ];
