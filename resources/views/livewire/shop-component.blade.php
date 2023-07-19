@@ -42,40 +42,28 @@
         <div class="col-md-9">                
           <div class="shop-container">
               <div class="product-cards">
-                <div class="product-card">
+                @foreach($products as $product)
+                    <div class="product-card">
+                    <a href="product_details.html"><img src="{{asset('images/product-')}}{{$product->id}}.jpg" alt="image of {{$product->name}}"></a>
+                    <h5>{{$product->name}}</h5>
+                    <p class="p-desc"><a href="product_details.html">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
+                    <p class="price">{{$product->regular_price}}</p>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    </div>  
+                @endforeach
+
+
+                <!-- <div class="product-card">
                   <a href="product_details.html"><img src="{{asset('images/hp2.png')}}" alt="Product Image"></a>
                   <h5>Fanvil X303P Enterprise IP Phone</h5>
                   <p class="p-desc"><a href="product_details.html">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
                   <p class="price">Ksh1,119.99</p>
                   <a href="#" class="add-to-cart">Add to Cart</a>
-                </div>                  
-                <div class="product-card">
-                  <a href="product_details.html"><img src="{{asset('images/product3.png')}}" alt="Product Image"></a>
-                  <h5>Fanvil X303P Enterprise IP Phone</h5>
-                  <p class="p-desc"><a href="product_details.html">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
-                  <p class="price">Ksh1,119.99</p>
-                  <a href="#" class="add-to-cart">Add to Cart</a>
-                </div>                  
-                <div class="product-card">
-                  <a href="product_details.html"><img src="{{asset('images/product1.jpg')}}" alt="Product Image"></a>
-                  <h5>Fanvil X303P Enterprise IP Phone</h5>
-                  <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
-                  <p class="price">Ksh1,119.99</p>
-                  <a href="#" class="add-to-cart">Add to Cart</a>
-                </div>
-               <div class="product-card">
-                  <a href="product_details.html"><img src="{{asset('images/product1.jpg')}}" alt="Product Image"></a>
-                  <h5>Fanvil X303P Enterprise IP Phone</h5>
-                  <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
-                  <p class="price">Ksh1,119.99</p>
-                  <a href="#" class="add-to-cart">Add to Cart</a>
-                </div>
-               <div class="product-card">
-                  <a href="product_details.html"><img src="{{asset('images/product1.jpg')}}" alt="Product Image"></a>
-                  <h5>Fanvil X303P Enterprise IP Phone</h5>
-                  <p class="p-desc"><a href="#">TP-Link 300Mbps Wireless N Wall-Plate Access Point – EAP115-WALL</a></p>
-                  <p class="price">Ksh1,119.99</p>
-                  <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>                   -->
+
+                
+                <div class="pagination-container">
+                    {{$products->links()}}
                 </div>
               
               </div>                    
