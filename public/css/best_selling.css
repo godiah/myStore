@@ -1,0 +1,116 @@
+
+/* PRODUCTS */
+.best-selling-product {
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-bottom: .8px solid #ddd;
+}
+.best-selling-product-container {
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.best-selling-product-container::-webkit-scrollbar {
+  display: none;
+}
+.best-selling-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 250px;
+  height:100%;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  margin-top: 7px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.best-selling-product-card:hover{
+  transform: scale(1.03) translateY(-2%);
+  transition: all 0.3s ease-in-out;
+}
+.best-selling-product-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  overflow: hidden;
+}
+.product-thumb {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.best-selling-product-info {
+  width: 100%;
+  padding: 3px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+.best-selling-product-brand {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  color: #001233;
+}
+.product-short-description {
+  width: 100%; 
+  opacity: 0.5;
+  margin: 5px 0;  
+  text-align: center;
+}
+.product-short-description a{
+  font-size: 14px;
+  text-decoration: none;
+}
+.best-selling-price {
+  font-weight: 900;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #001233;  
+}
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
