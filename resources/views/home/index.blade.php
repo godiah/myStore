@@ -7,8 +7,8 @@
     <!-- CSS Links -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/best_selling.css">
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="{{asset('css/best_selling.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}" />
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
