@@ -86,36 +86,25 @@
       <h4>Related Products</h4>
       <div class="related-container">
         <div class="related-product-cards">
-          <div class="related-product-card">
+            @foreach ($rproducts as $rproduct)
+                <div class="related-product-card">
+                    <a href="{{route('product.details',['slug'=>$rproduct->slug])}}"><img src="{{asset('images/')}}/{{$rproduct->image}}.jpg" alt="Image of {{$rproduct->name}}"></a>
+                    <h5>{{$rproduct->name}}</h5>
+                    <p class="desc">Fanvil X6 High-End VoIP IP Phone 4.3-Inch Color Display</p>
+                    <p class="price">Kshs. {{$rproduct->regular_price}}</p>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>
+            @endforeach
+          <!-- <div class="related-product-card">
             <a href="product_details.html"><img src="{{asset('images/1.jpg')}}" alt="Product Image"></a>
             <h5>FANVIL IP PHONES</h5>
             <p class="desc">Fanvil X6 High-End VoIP IP Phone 4.3-Inch Color Display</p>
             <p class="price">19.99</p>
             <a href="#" class="add-to-cart">Add to Cart</a>
-          </div>      
-          <div class="related-product-card">
-            <img src="{{asset('images/2.jpg')}}" alt="Product Image">
-            <h5>FANVIL IP PHONES</h5>
-            <p class="desc">Fanvil X5 ­ Executive ​Desk Phone</p>
-            <p class="price">19.99</p>
-            <a href="#" class="add-to-cart">Add to Cart</a>
-          </div>      
-          <div class="related-product-card">
-            <img src="{{asset('images/3.jpg')}}" alt="Product Image">
-            <h5>FANVIL IP PHONES</h5>
-            <p class="desc">Fanvil i56A Touchscreen Android Indoor Doorphone</p>
-            <p class="price">19.99</p>
-            <a href="#" class="add-to-cart">Add to Cart</a>
-          </div>
-         <div class="related-product-card">
-            <img src="{{asset('images/4.jpg')}}" alt="Product Image">
-            <h5>FANVIL IP PHONES</h5>
-            <p class="desc">Fanvil X6 High-End VoIP IP Phone 4.3-Inch Color Display</p>
-            <p class="price">19.99</p>
-            <a href="#" class="add-to-cart">Add to Cart</a>
-          </div>
+          </div>       -->
         <!-- Add more product cards here -->
         </div>
       </div>
+      <!-- <div>More</div> -->
     </div>
 </div>
