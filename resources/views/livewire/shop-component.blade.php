@@ -1,5 +1,13 @@
 <div>
     {{-- The whole world belongs to you. --}}
+    <style>
+        nav svg{
+            height:20px;
+        }
+        nav .hidden{
+            display:block;
+        }
+    </style>
     <div class="online-shop-container">
       <div>
           <h3 class="online-title">Online Shopping</h3>
@@ -62,13 +70,19 @@
                 </div>                   -->
 
                 
-                <div class="pagination-container">
-                    {{$products->links()}}
-                </div>
+                <!-- <div class="pagination-container">
+                    {{-- $products->links() --}}
+                </div> -->
+
+                
               
-              </div>                    
+              </div>  
+                                
           </div>
         </div>
       </div>
+        <div>
+            {{$products->links()}}
+        </div>
     </div>
 </div>
