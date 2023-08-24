@@ -37,18 +37,25 @@
             <h5 class="category-title">Product Categories</h5>
             <div>
               <ul>
+                @foreach ($categories as $category)
+                <li><a href="#">{{$category->name}}</a></li>
+                  
+                @endforeach
+                <!-- <li><a href="#">Computing Products</a></li>
                 <li><a href="#">Computing Products</a></li>
                 <li><a href="#">Computing Products</a></li>
-                <li><a href="#">Computing Products</a></li>
-                <li><a href="#">Computing Products</a></li>
-                <li><a href="#">Computing Products</a></li>
+                <li><a href="#">Computing Products</a></li> -->
               </ul>
             </div>                  
           </div>
         </div>
         <!-- Products -->
-        <div class="col-md-9">                
+        <div class="col-md-9"> 
+          <div>
+            <p style="text-decoration: none;">We have found <strong>{{$products->total()}}</strong> products for you.</p>
+          </div>               
           <div class="shop-container">
+            
               <div class="product-cards">
                 @foreach($products as $product)
                     <div class="product-card">

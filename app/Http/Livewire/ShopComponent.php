@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Product;
+use App\Models\Category;
 use Livewire\WithPagination;
 use Cart;
 // use Livewire\Component;
@@ -15,7 +16,7 @@ class ShopComponent extends Component
 
     public function store($product_id,$product_name,$product_price)
     {
-        Cart::add($product_id,$product_name,1,$product_price)->associate('\App\Moddels\Product');
+        Cart::add($product_id,$product_name,1,$product_price)->associate('\App\Models\Product');
         session()->flash('success_message','Item added to cart');
         return redirect()->route('shop.cart');
     }
@@ -23,6 +24,8 @@ class ShopComponent extends Component
     public function render()
     {
         $products=Product::paginate(10);
-        return view('livewire.shop-component',['products'=>$products]);
+
+        $categories=Category::orderBy('name','ASC')->get();
+        return view('livewire.shop-component',['products'=>$products,'categories'=>$categories]);
     }
 }
