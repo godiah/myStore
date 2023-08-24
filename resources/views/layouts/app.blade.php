@@ -135,11 +135,15 @@
             @endif
         </div>
         <div class="border-login"></div>
-        <a href="cart.html"><i class="crt fa-solid fa-cart-shopping"></i><sup>2</sup> Cart/Ksh0.00</a>          
+          @livewire('cart-icon-component')
+        <!-- <a href="cart.html">
+          <i class="crt fa-solid fa-cart-shopping"></i>
+          <sup>2</sup> Cart/Ksh0.00
+        </a>           -->
       </div>
-      <div>
+      <!-- <div>
         <a href="cart.html" class="cart-sm d-xl-none d-lg-none d-md-none"><i class="fa-solid fa-cart-shopping mx-1"></i><sup>1</sup></a>
-      </div>
+      </div> -->
     </div>
 
     <!-- Main Navigation Bar -->
