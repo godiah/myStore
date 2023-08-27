@@ -1,6 +1,9 @@
 <div>
     {{-- The best athlete wants his opponent at his best. --}}
     <!-- Product Details -->
+    @php
+      $witems=Cart::instance('wishlist')->content()->pluck('id');
+    @endphp
     <div class="product-wrapper">
       <div class="product-image">
         <img src="{{asset('images/')}}/{{$product->image}}.jpg" alt="Product Image">
@@ -29,7 +32,15 @@
             </div>
             <div>
               <a href="#" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" class="add-to-cart">Add to Cart</a>
-              <a href="wishlist.html" class="add-to-wishlist"><i class="fa-regular fa-heart"></i>Add to Wishlist</a>
+
+              <!-- Alert message success added to wishlist and also change color when wishlisted -->
+              @if($witems->contains($product->id))
+                <a href="#" wire:click.prevent="removeFromWishlist({{$product->id}})" class="added-to-wishlist">
+                <i class="fa-regular fa-heart"></i>Added to Wishlist
+                </a>
+              @else
+                <a href="" wire:click.prevent="addToWishlist({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"  class="add-to-wishlist"><i class="fa-regular fa-heart"></i>Add to Wishlist</a>
+              @endif
             </div>
           </div>
           <p class="mt-3">Buy at Best and Discounted prices in Nairobi kenya</p>
