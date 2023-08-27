@@ -1,11 +1,11 @@
 <div>
     <a href="{{route('shop.cart')}}">
         <i class="crt fa-solid fa-cart-shopping"></i>
-        @if (Cart::count()==0)
+        @if (Cart::instance('cart')->count()==0)
             <sup>0</sup>Cart/Ksh0.00
-        @elseif(Cart::count()>0)
-            <sup>{{Cart::count()}}</sup>
-            Cart/Ksh.{{Cart::total()}}
+        @elseif(Cart::instance('cart')->count()>0)
+            <sup>{{Cart::instance('cart')->count()}}</sup>
+            Cart/Ksh.{{Cart::instance('cart')->total()}}
         @endif
         
     </a>
