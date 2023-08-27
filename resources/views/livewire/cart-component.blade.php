@@ -10,7 +10,7 @@
           <strong>Success | {{Session::get('success_message')}}</strong>
         </div>
       @endif
-      @if(Cart::count()>0)
+      @if(Cart::instance('cart')->count()>0)
 
       <table id="cart">
           
@@ -26,7 +26,7 @@
         </thead>
 
           <tbody>
-              @foreach(Cart::content() as $item)
+              @foreach(Cart::instance('cart')->content() as $item)
                 <tr>
                   <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
                   <td class="item-name">              
