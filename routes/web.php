@@ -14,6 +14,8 @@ use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminCategoriesComponent;
+use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 
 
 /*
@@ -53,6 +55,8 @@ Route::middleware(['auth'])->group(function(){
 // Admin group routes
 Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/all-categories',AdminCategoriesComponent::class)->name('admin.categories');
+    Route::get('/admin/add/category',AdminAddCategoryComponent::class)->name('admin.add.category');
 });
 
 Route::middleware('auth')->group(function () {
