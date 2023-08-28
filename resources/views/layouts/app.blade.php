@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="{{asset('css/wishlist.css')}}">
     <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/admin/styles_admin.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/admin/all_products.css')}}">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -93,7 +95,7 @@
                         <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user"></i>Dashboard</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Products</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Categories</a></li>
+                        <!-- <li><a class="dropdown-item" href="{{route('admin.categories')}}"><i class="fa-solid fa-basket-shopping"></i>Categories</a></li> -->
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Customers</a></li>
                         <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
                     </ul>
