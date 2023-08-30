@@ -58,13 +58,155 @@
 
     <!-- Logo, Search Bar Log In & Cart  -->
     <div class="logo-search" id="header-1">
-      <!-- <div class="sm-menu-btn cart-sm d-xl-none d-lg-none d-md-none" id="menu-toggle">
-          <i class="fa-solid fa-bars-staggered"></i>
-      </div> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Menu Button --> 
+      <div class="sm-menu-btn cart-sm d-xl-none d-lg-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered"></i></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <!-- Shop -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Shop</a>
+              </li>
+              <!-- Accessories -->
+              <li class="nav-item dropdown">
+                  <a href="shop_accessories.html" class="desktop-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Accessories
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Computer Accessories</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Headphones</a></li>
+                        <li><a href="#" class="off-link">Laptop Chargers</a></li>
+                        <li><a href="#" class="off-link">Laptop Batteries</a></li>
+                        <li><a href="#" class="off-link">Webcam</a></li>
+                        <li><a href="#" class="off-link">VGA Cables</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Storage</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Flash Drives</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Internal Hard Disk HDD</a></li>
+                        <li><a href="#" class="off-link">Solid State Devices SSD</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Network Accessories</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Patch Panel</a></li>
+                      </ul>
+                    </li>
+                  </ul>  
+              </li>
+              <!-- Computing -->
+              <li class="nav-item dropdown">
+                  <a href="shop_computing.html" class="desktop-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Computing
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Laptops</a>
+                      <ul class="mega-links-canvas">                        
+                        <li><a href="#" class="off-link">DELL Laptops</a></li>
+                        <li><a href="#" class="off-link">HP Laptops</a></li>
+                        <li><a href="#" class="off-link">Lenovo Laptops</a></li>
+                        <li><a href="#" class="off-link">Asus Laptops</a></li>
+                        <li><a href="#" class="off-link">Refurbished Laptops</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Desktop Computers</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Flash Drives</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Solid State Devices SSD</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Printers & Scanners</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Patch Panel</a></li>
+                      </ul>
+                    </li>
+                  </ul>  
+              </li>
+              <!-- Electronics -->
+              <li class="nav-item dropdown">
+                  <a href="shop_electronics.html" class="desktop-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Electronics
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Cameras</a>
+                      <ul class="mega-links-canvas">                        
+                        <li><a href="#" class="off-link">DELL Laptops</a></li>
+                        <li><a href="#" class="off-link">HP Laptops</a></li>
+                        <li><a href="#" class="off-link">Lenovo Laptops</a></li>
+                        <li><a href="#" class="off-link">Asus Laptops</a></li>
+                        <li><a href="#" class="off-link">Refurbished Laptops</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Desktop Computers</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Flash Drives</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Solid State Devices SSD</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Printers & Scanners</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Patch Panel</a></li>
+                      </ul>
+                    </li>
+                  </ul>  
+              </li>
+              <!-- Networking -->
+              <li class="nav-item dropdown">
+                  <a href="shop_networking.html" class="desktop-item nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Networking
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Cameras</a>
+                      <ul class="mega-links-canvas">                        
+                        <li><a href="#" class="off-link">DELL Laptops</a></li>
+                        <li><a href="#" class="off-link">HP Laptops</a></li>
+                        <li><a href="#" class="off-link">Lenovo Laptops</a></li>
+                        <li><a href="#" class="off-link">Asus Laptops</a></li>
+                        <li><a href="#" class="off-link">Refurbished Laptops</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Desktop Computers</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Flash Drives</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Memory Cards</a></li>
+                        <li><a href="#" class="off-link">Solid State Devices SSD</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Printers & Scanners</a>
+                      <ul class="mega-links-canvas">
+                        <li><a href="#" class="off-link">Patch Panel</a></li>
+                      </ul>
+                    </li>
+                  </ul>  
+              </li>
+              <!-- Contact Us -->
+              <li class="nav-item">
+                <a class="nav-link" href="contact_us.html">Contact Us</a>
+              </li>
+            </ul>
+            <!-- Search -->
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search Product" aria-label="Search">
+              <button class="btn btn-success" type="submit" style="width: 40%; height: fit-content;">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
       <!-- Logo -->
       <div class="logo-container">
           <a class="logo-brand" href="index.html">
