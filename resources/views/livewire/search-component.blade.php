@@ -170,6 +170,7 @@
           <div class="shop-container">
             
               <div class="product-cards">
+                <!-- If products is 0 no products look try searching for another term -->
                 @foreach($products as $product)
                     <div class="product-card">
                     <a href="{{route('product.details',['slug'=>$product->slug])}}"><img src="{{asset('images/')}}/{{$product->image}}.jpg" alt="image of {{$product->name}}"></a>
@@ -206,3 +207,4 @@
         </div>
     </div>
 </div>
+

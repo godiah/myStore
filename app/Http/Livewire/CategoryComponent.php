@@ -10,9 +10,10 @@ use Cart;
 // use Livewire\Component;
 
 
-class ShopComponent extends Component
+class CategoryComponent extends Component
 {
     use WithPagination;
+    public $slug;
     public $pageSize=10;
     public $orderBy="Default Sorting";
 
@@ -21,6 +22,11 @@ class ShopComponent extends Component
         Cart::add($product_id,$product_name,1,$product_price)->associate('\App\Models\Product');
         session()->flash('success_message','Item added to cart');
         return redirect()->route('shop.cart');
+    }
+
+    public function mount($slug)
+    {
+        $this->slug=$slug;
     }
 
     public function changePageSize($size)
@@ -33,29 +39,37 @@ class ShopComponent extends Component
         $this->orderBy = $order;
     }
 
+
     public function render()
     {
         
+        $category=Category::where('slug',$this->slug)->first();
+        $category_id=$category->id;
+        $category_name=$category->name;
+
+        // $products=Product::where('category_id',$category_id)->paginate(10);
+
         if ($this->orderBy == 'Price: Low to High') 
         {
             
-            $products=Product::orderBy('regular_price','ASC')->paginate($this->pageSize);
+            $products=Product::where('category_id',$category_id)->orderBy('regular_price','ASC')->paginate($this->pageSize);
             
         } 
         elseif ($this->orderBy == 'Price: High to Low') 
         {
             
-            $products=Product::orderBy('regular_price','DESC')->paginate($this->pageSize);
+            $products=Product::where('category_id',$category_id)->orderBy('regular_price','DESC')->paginate($this->pageSize);
         } 
         elseif ($this->orderBy == 'Latest') {
-            $products=Product::orderBy('created_at','DESC')->paginate($this->pageSize);
+            $products=Product::where('category_id',$category_id)->orderBy('created_at','DESC')->paginate($this->pageSize);
         } 
         else {
             
-            $products=Product::paginate($this->pageSize);
+            $products=Product::where('category_id',$category_id)->paginate($this->pageSize);
         }
 
+
         $categories=Category::orderBy('name','ASC')->get();
-        return view('livewire.shop-component',['products'=>$products,'categories'=>$categories]);
+        return view('livewire.category-component',['products'=>$products,'categories'=>$categories, 'category_id'=>$category_id,'category_name'=>$category_name]);
     }
 }

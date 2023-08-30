@@ -28,7 +28,7 @@
               <span class="plus"> + </span>
             </div>
             <div>
-              <a href="#" class="add-to-cart">Add to Cart</a>
+              <a href="#" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" class="add-to-cart">Add to Cart</a>
               <a href="wishlist.html" class="add-to-wishlist"><i class="fa-regular fa-heart"></i>Add to Wishlist</a>
             </div>
           </div>

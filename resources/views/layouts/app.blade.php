@@ -72,12 +72,7 @@
           </a>
       </div>
       <!-- Search Bar -->
-      <div class="InputContainer">
-          <input type="text" name="text" class="input" id="input" placeholder="Search...">  
-          <label for="input" class="labelforsearch">
-            <svg viewBox="0 0 512 512" class="searchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
-          </label>          
-      </div>
+      @livewire('header-search-component')
       <!-- Log In & Cart  -->
       <div class="log-in-container"> 
         <div class="dropdown">
@@ -135,11 +130,15 @@
             @endif
         </div>
         <div class="border-login"></div>
-        <a href="cart.html"><i class="crt fa-solid fa-cart-shopping"></i><sup>2</sup> Cart/Ksh0.00</a>          
+          @livewire('cart-icon-component')
+        <!-- <a href="cart.html">
+          <i class="crt fa-solid fa-cart-shopping"></i>
+          <sup>2</sup> Cart/Ksh0.00
+        </a>           -->
       </div>
-      <div>
+      <!-- <div>
         <a href="cart.html" class="cart-sm d-xl-none d-lg-none d-md-none"><i class="fa-solid fa-cart-shopping mx-1"></i><sup>1</sup></a>
-      </div>
+      </div> -->
     </div>
 
     <!-- Main Navigation Bar -->
