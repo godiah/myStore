@@ -14,8 +14,8 @@
                 <h5>{{$category->name}}</h5>              
                 </div>
                 <div class="admin-prod-item-buttons">
-                <a href="edit_categories.html" class="buy-now"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
-                <a href="#" wire:click.prevent="deleteCategory()" class="remove-product"><i class="fa-solid fa-trash"></i> Remove</a>
+                <a href="{{route('admin.category.edit',['category_id'=>$category->id])}}" class="buy-now"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                <a href="#" wire:click.prevent="deleteCategory({{ $category->id }})" class="remove-product"><i class="fa-solid fa-trash"></i> Remove</a>
                 </div>
             </div>
             @endforeach
