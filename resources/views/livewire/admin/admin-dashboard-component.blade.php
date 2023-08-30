@@ -44,7 +44,7 @@
      <a href="{{route('admin.categories')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">dashboard</span>Categories</li>
      </a>  
-     <a href="{{route('admin.add.category')}}">
+     <a href="{{route('admin.category.add')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">style</span>Add Category</li>
      </a>
      <a href="#">
