@@ -91,7 +91,7 @@
               <a class="nav-link mx-2 " href="#">Services</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link mx-2 " href="#">Contact Us</a>
+              <a class="nav-link mx-2 " href="#">Contact U</a>
             </li>            
           </ul>
           <ul class="navbar-nav ms-auto"> 
