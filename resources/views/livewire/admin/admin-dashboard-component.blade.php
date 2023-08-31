@@ -35,7 +35,7 @@
      color: #A2A2A1FF;">close</span>
    </div>
    <ul class="sidebar-list">
-     <a href="all_products.html">
+     <a href="{{route('admin.products')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">inventory_2</span>Products</li> 
      </a> 
      <a href="add_product.html">
