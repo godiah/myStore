@@ -25,6 +25,9 @@ return new class extends Migration
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->bigInteger('sub_category_id')->unsigned()->nullable();
             $table->timestamps();
+            $table->foreign('sup_category_id')->references('id')->on('super_categories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade');
         });
     }
 
