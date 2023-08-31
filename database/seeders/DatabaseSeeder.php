@@ -22,7 +22,9 @@ class DatabaseSeeder extends Seeder
             'utype'=>'ADM',
             'password'=>bcrypt('mystoreadmin'),
         ]);
+        \App\Models\SuperCategory::factory(3)->create();
         \App\Models\Category::factory(5)->create();
-        \App\Models\Product::factory(20)->create();
+        \App\Models\SubCategory::factory(20)->create();
+        \App\Models\Product::factory(30)->create();
     }
 }
