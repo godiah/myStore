@@ -82,6 +82,32 @@
   margin-right: 5px;
  }
 
+ /* Off Canvas */
+.fa-bars-staggered{
+  color: #666;
+}
+.offcanvas-header h5{
+  text-decoration: none;
+}
+.offcanvas-title{
+  text-decoration: none;
+}
+.mega-links-canvas{
+  list-style: none;
+}
+.off-link{
+  text-decoration: none;
+}
+.off-link::hover{
+  transform: scale(1.1);
+}
+.dropdown-menu-dark{
+  min-width: 100%;
+}
+.dropdown{
+  border-right: none;
+}
+
 /* Media Queries */
 
 /* Extra Small Screens-- Phones */
@@ -89,13 +115,15 @@
   .logo-search{
     display: flex;
     flex-direction: row;
-    align-items: center;    
+    align-items: flex-start;
+    justify-content: space-evenly;    
   }
   .sm-menu-btn{
-    width: 40%;
+    align-items: flex-start;
+    margin-right: auto;
   }
   .logo-brand{
-    font-size: 18px;
+    display: none;
   }
   .InputContainer{
     display: none;
@@ -113,6 +141,10 @@
     font-size: 16px;
     font-weight: 600;
   }
+  .dropdown{
+  border-right: none;
+  
+}
 }
 
 /* == Small Devices/Potrait == */
@@ -120,13 +152,15 @@
   .logo-search{
     display: flex;
     flex-direction: row;
-    align-items: center;       
+    align-items: flex-start;
+    justify-content: space-evenly;       
   }
   .sm-menu-btn{
-    width: 40%;
+    align-items: flex-start;
+    margin-right: auto;
   }
   .logo-brand{
-    font-size: 18px;
+    display: none;
   }
   .InputContainer{
     display: none;
@@ -146,25 +180,26 @@
   } 
 }
 
-/* == Medium Devices/Landscacpe == */
-@media (min-width:768px) and (max-width:970px){
+/* == Medium Devices/Landscape == */
+@media (min-width:768px) and (max-width:993px){
    .logo-search{
     display: flex;
     flex-direction: row;
-    align-items: center;       
+    align-items: center;
+    justify-content: center;       
   }
   .sm-menu-btn{
-    width: 40%;
+    margin-right: auto;    
   }
   .logo-brand{
-    font-size: 18px;
+    display: none;
   }
   .InputContainer{
     display: none;
-    width: 0;
+    /* width: 0; */
   }
   .log-in-container a{
-    display: none;
+    visibility: visible;
   }
   .border-login{
     display: none;
