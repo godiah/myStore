@@ -20,7 +20,7 @@ return new class extends Migration
             $table->enum('stock_status',['instock','outofstock']);
             $table->unsignedInteger('quantity')->default(10);
             $table->string('image');
-            $table->text('images')->nullable();
+            $table->text('image2')->nullable();
             $table->bigInteger('sup_category_id')->unsigned()->nullable();
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->bigInteger('sub_category_id')->unsigned()->nullable();
