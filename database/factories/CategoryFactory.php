@@ -26,7 +26,7 @@ class CategoryFactory extends Factory
             //
             'name'=> $category_name,
             'slug'=> $slug,
-            'super_category_id'=>$sup_cat_id
+            'sup_category_id'=>$sup_cat_id
         ];
     }
 }

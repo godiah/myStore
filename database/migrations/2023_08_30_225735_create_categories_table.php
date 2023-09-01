@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->bigInteger('super_category_id')->unsigned()->nullable();
+            $table->bigInteger('sup_category_id')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('super_category_id')->references('id')->on('super_categories')->onDelete('set null');
+            $table->foreign('sup_category_id')->references('id')->on('super_categories')->onDelete('set null');
         });
     }
 
