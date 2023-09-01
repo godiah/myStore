@@ -38,7 +38,7 @@
      <a href="{{route('admin.products')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">inventory_2</span>Products</li> 
      </a> 
-     <a href="add_product.html">
+     <a href="{{route('admin.products.add')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">category</span>Add Product</li>  
      </a>
      <a href="{{route('admin.categories')}}">

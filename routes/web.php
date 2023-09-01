@@ -20,6 +20,7 @@ use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 
 use App\Http\Livewire\Admin\AdminProductsComponent;
+use App\Http\Livewire\Admin\AdminAddProductsComponent;
 
 
 
@@ -66,6 +67,7 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/category/edit/{category_id}',AdminEditCategoryComponent::class)->name('admin.category.edit');
 
     Route::get('/admin/all-products',AdminProductsComponent::class)->name('admin.products');
+    Route::get('/admin/products/add',AdminAddProductsComponent::class)->name('admin.products.add');
 });
 
 Route::middleware('auth')->group(function () {
