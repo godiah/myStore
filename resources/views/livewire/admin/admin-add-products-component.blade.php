@@ -104,26 +104,62 @@
                     <!-- <label for=""></label> -->
                     <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
                     <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image">
+                    @if($image)
+                        <img src="{{ $image->temporaryUrl() }}" class="" alt="">
+                    @endif
+                    @error('image')
+                        <p style="text-color:red;">{{ $message }}</p>
+                    @enderror
                 </div>
                 <!-- Image 2 -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
                     <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
                     <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image2">
+                    @if($image2)
+                        <img src="{{ $image2->temporaryUrl() }}" class="" alt="">
+                    @endif
+                    @error('image2')
+                        <p style="text-color:red;">{{ $message }}</p>
+                    @enderror
+                </div>
+                <!-- Image 3 -->
+                <div class="input-field">
+                    <!-- <label for=""></label> -->
+                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
+                    <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image3">
+                    @if($image3)
+                        <img src="{{ $image3->temporaryUrl() }}" class="" alt="">
+                    @endif
+                    @error('image3')
+                        <p style="text-color:red;">{{ $message }}</p>
+                    @enderror
+                    </div>
+                <!-- Image 4 -->
+                <div class="input-field">
+                    <!-- <label for=""></label> -->
+                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
+                    <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image4">
+                    @if($image4)
+                        <img src="{{ $image4->temporaryUrl() }}" class="" alt="">
+                    @endif
+                    @error('image4')
+                        <p style="text-color:red;">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="d-flex">
                     <!-- Product Quantity -->
-                <div class="input-field">
-                    <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined"><i class="fa-solid fa-basket-shopping"></i></span>
-                    <input type="number" name="quantity" id="" placeholder="Quantity" required autocomplete="off" wire:model="quantity">
-                </div>
-                <!-- Product Price -->
-                <div class="input-field">
-                    <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined"><i class="fa-solid fa-tag"></i></span>
-                    <input type="number" name="regular_price" id="" placeholder="Price" required autocomplete="off" wire:model="regular_price">
-                </div>
+                    <div class="input-field">
+                        <!-- <label for=""></label> -->
+                        <span class="material-icons-outlined"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <input type="number" name="quantity" id="" placeholder="Quantity" required autocomplete="off" wire:model="quantity">
+                    </div>
+                    <!-- Product Price -->
+                    <div class="input-field">
+                        <!-- <label for=""></label> -->
+                        <span class="material-icons-outlined"><i class="fa-solid fa-tag"></i></span>
+                        <input type="number" name="regular_price" id="" placeholder="Price" required autocomplete="off" wire:model="regular_price">
+                    </div>
                 </div>                         
                 <!-- Submit Button -->
                 <input type="submit" name="" id="" class="btn solid" value="Add Product">

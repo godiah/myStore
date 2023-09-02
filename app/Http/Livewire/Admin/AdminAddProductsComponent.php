@@ -28,6 +28,8 @@ class AdminAddProductsComponent extends Component
 
     public $image;
     public $image2 = null;
+    public $image3 = null;
+    public $image4 = null;
 
     public $unique_id;
     public $product_id;
@@ -75,6 +77,16 @@ class AdminAddProductsComponent extends Component
             $imageName2 = $productName.'_'.Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image2->extension();
             $this->image2->storeAs('products', $imageName2);
             $product->image2 = $imageName2;
+        }
+        if ($this->image3) {
+            $imageName3 = $productName.'_'.Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image3->extension();
+            $this->image3->storeAs('products', $imageName3);
+            $product->image3 = $imageName3;
+        }
+        if ($this->image4) {
+            $imageName4 = $productName.'_'.Carbon::now()->timestamp . '.' . Str::random(6) . '_' . $this->image4->extension();
+            $this->image4->storeAs('products', $imageName4);
+            $product->image4 = $imageName4;
         }
 
         $product->save();
