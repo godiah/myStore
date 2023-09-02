@@ -82,8 +82,8 @@
                     <span class="material-icons-outlined">Stock Status</span>            
                     <select name="stock_status" id="" wire:model="stock_status">
                         <option value="">Select Category</option>
-                        <option value="in stock">Instock</option>
-                        <option value="out of stock">Out of Stock</option>
+                        <option value="instock">Instock</option>
+                        <option value="outofstock">Out of Stock</option>
                         <!-- <option value="">Category 3</option> -->
                     </select>
                     @error('stock_status')
@@ -105,7 +105,7 @@
                     <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
                     <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image">
                     @if($image)
-                        <img src="{{ $image->temporaryUrl() }}" class="" alt="">
+                        <img src="{{ $image->temporaryUrl() }}" style="width:30px" class="" alt="">
                     @endif
                     @error('image')
                         <p style="text-color:red;">{{ $message }}</p>
@@ -117,7 +117,7 @@
                     <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
                     <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image2">
                     @if($image2)
-                        <img src="{{ $image2->temporaryUrl() }}" class="" alt="">
+                        <img src="{{ $image2->temporaryUrl() }}" style="width:30px" class="" alt="">
                     @endif
                     @error('image2')
                         <p style="text-color:red;">{{ $message }}</p>
@@ -129,7 +129,7 @@
                     <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
                     <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image3">
                     @if($image3)
-                        <img src="{{ $image3->temporaryUrl() }}" class="" alt="">
+                        <img src="{{ $image3->temporaryUrl() }}" style="width:30px" class="" alt="">
                     @endif
                     @error('image3')
                         <p style="text-color:red;">{{ $message }}</p>
@@ -141,7 +141,7 @@
                     <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
                     <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image4">
                     @if($image4)
-                        <img src="{{ $image4->temporaryUrl() }}" class="" alt="">
+                        <img src="{{ $image4->temporaryUrl() }}" style="width:30px" class="" alt="">
                     @endif
                     @error('image4')
                         <p style="text-color:red;">{{ $message }}</p>
