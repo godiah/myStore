@@ -15,7 +15,6 @@
                 <h2 class="title">New Category Form</h2>
                 <!-- Category Name -->
                 <div class="input-field">
-                    <label for="name">Category name</label>
                     <span class="material-icons-outlined">style</span>
                     <input type="text" name="name" id="name" placeholder="Category Name" required autocomplete="off" wire:model="name" wire:keyup="generateSlug()">
                     @error('name')
@@ -24,7 +23,6 @@
                 </div>     
                <!-- Category slug -->
                <div class="input-field">
-                    <label for="name">Category Slug</label>
                     <span class="material-icons-outlined">style</span>
                     <input type="text" name="slug" id="slug"  required autocomplete="off" wire:model="slug">
                     @error('slug')

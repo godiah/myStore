@@ -14,6 +14,10 @@
   text-decoration: none;
   color: #001233;
 }
+form input{
+  padding: 0;
+  margin: 0;
+}
 .InputContainer {
   height: 35px;
   min-width: 50%;
@@ -39,6 +43,14 @@
   outline: none;
   font-size: 0.9em;
   caret-color: #001233;
+}
+.search-form{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: #001233; 
 }
 .labelforsearch {
   cursor: text;

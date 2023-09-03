@@ -2,7 +2,7 @@
     {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
     <main>
     <!-- Hero Section -->
-    <div class="main-hero" id="hero">
+    <div class="main-hero" id="home-hero">
       <div class="horizon-line">
         <h3>Welcome to My Store</h3>
       </div>
