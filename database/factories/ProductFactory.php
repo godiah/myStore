@@ -24,7 +24,8 @@ class ProductFactory extends Factory
             //
             'name'=>$product_name,
             'slug'=>$slug,
-            'description'=>$this->faker->text(200),
+            'short_description'=>$this->faker->text(100),
+            'description'=>$this->faker->text(250),
             'regular_price'=> $this->faker->numberBetween(5000,100000),
             'stock_status'=>'instock',
             'quantity'=>$this->faker->numberBetween(10,50),

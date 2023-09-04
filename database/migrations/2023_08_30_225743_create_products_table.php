@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->text('description',8,2)->nullable();
+            $table->text('short_description')->nullable();
+            $table->text('description')->nullable();
             $table->decimal('regular_price');
             $table->enum('stock_status',['instock','outofstock']);
             $table->unsignedInteger('quantity')->default(10);
