@@ -20,6 +20,7 @@ class AdminAddProductsComponent extends Component
 
     public $name;
     public $slug;
+    public $short_description;
     public $description;
     public $regular_price;
 
@@ -57,6 +58,7 @@ class AdminAddProductsComponent extends Component
         $product = new Product();
         $product->name = $this->name;
         $product->slug = $this->slug;
+        $product->short_description = $this->short_description;
         $product->description = $this->description;
         $product->regular_price = $this->regular_price;
         $product->sup_category_id = $this->sup_category_id;

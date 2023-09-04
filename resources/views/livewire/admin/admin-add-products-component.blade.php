@@ -21,6 +21,15 @@
                         <p styles="color:red;" class="">{{$message}}</p>
                     @enderror
                 </div>
+                <!-- Product Short Description -->
+                <div class="input-field">
+                    <!-- <label for=""></label> -->
+                    <span class="material-icons-outlined"><i class="fa-solid fa-note-sticky"></i></span>
+                    <input type="text" name="short_description" id="" placeholder="Short Description" required autocomplete="off" wire:model="short_description">
+                    @error('short_description')
+                        <p styles="color:red;" class="">{{$message}}</p>
+                    @enderror
+                </div>
                 <!-- Product Description -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
