@@ -4,7 +4,7 @@
         @foreach ($products as $product)
             <div class="admin-prod-item">
                 <div class="admin-prod-item-image">
-                <a href="#">
+                <a href="{{route('admin.products.edit',['product_id'=>$product->id])}}">
                     <img src="{{asset('images/')}}/{{$product->image}}.jpg" alt="Product Image">
                 </a>
                 </div>
@@ -23,7 +23,7 @@
                             
                 </div>
                 <div class="admin-prod-item-buttons">
-                <a href="edit_product.html" class="buy-now"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                <a href="{{route('admin.products.edit',['product_id'=>$product->id])}}" class="buy-now"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
                 <a href="#" class="remove-product"><i class="fa-solid fa-trash"></i> Remove</a>
                 </div>
             </div>
