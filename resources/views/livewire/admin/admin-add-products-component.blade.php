@@ -43,8 +43,8 @@
                 <!-- Product Super Category -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined">Super Category</span>            
-                    <select name="sup_category_id" id="" wire:model="sup_category_id" wire:change="changeCategory">
+                    <span class="material-icons-outlined"><i class="fa-brands fa-slack"></i></span>            
+                    <select name="sup_category_id" id="" placeholder="Super Category" wire:model="sup_category_id" wire:change="changeCategory">
                         <option value="">Select Super Category</option>
                         @foreach ($supcategories as $supcategory)
                             <option value="{{$supcategory->id}}">{{$supcategory->name}}</option>
@@ -59,7 +59,7 @@
                 <div class="input-field">
                     <!-- <label for=""></label> -->
                     <span class="material-icons-outlined">category</span>            
-                    <select name="category_id" id="" wire:model="category_id" wire:change="changeSubcategory">
+                    <select name="category_id" id="" placeholder="Category" wire:model="category_id" wire:change="changeSubcategory">
                         <option value="">Select Category</option>
                         @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
@@ -73,12 +73,12 @@
                 <!-- Product sub category -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined">sub category</span>            
-                    <select name="sub_category_id" id="" wire:model="sub_category_id">
-                        <option value="">Select Category</option>
+                    <span class="material-icons-outlined"><i class="fa-solid fa-list"></i></span>            
+                    <select name="sub_category_id" id="" placeholder="Sub-Category" wire:model="sub_category_id">
+                        <option value="">Select Sub-category</option>
                         @foreach ($subcategories as $subcategory)
                             <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>  
-                        @endforeach
+                        @endforeach 
                     </select>
                     @error('sub_category_id')
                         <p styles="color:red;" class="">{{$message}}</p>
@@ -88,9 +88,9 @@
                 <!-- Product Instock -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined">Stock Status</span>            
-                    <select name="stock_status" id="" wire:model="stock_status">
-                        <option value="">Select Category</option>
+                    <span class="material-icons-outlined"><i class="fa-solid fa-truck-fast"></i></span>            
+                    <select name="stock_status" id="" placeholder="Stock Status" wire:model="stock_status">
+                        <option value="">Stock Status</option>
                         <option value="instock">Instock</option>
                         <option value="outofstock">Out of Stock</option>
                         <!-- <option value="">Category 3</option> -->
@@ -109,48 +109,51 @@
 
                 <!-- Product Images -->
                 <!-- Image 1 -->
-                <div class="input-field">
-                    <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image">
+                <label for="" class="prod-label">Product Images:</label>
+                <div class="input-field-img">                    
+                    <!-- <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span> -->
+                    <input class="img-layout" type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image">
                     @if($image)
-                        <img src="{{ $image->temporaryUrl() }}" style="width:30px" class="" alt="">
+                        <div class="prod-preview">
+                            <img  src="{{ $image->temporaryUrl() }}"  alt="">
+                        </div>
                     @endif
                     @error('image')
                         <p style="text-color:red;">{{ $message }}</p>
                     @enderror
                 </div>
                 <!-- Image 2 -->
-                <div class="input-field">
-                    <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image2">
+                <div class="input-field-img">
+                    <!-- <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span> -->
+                    <input class="img-layout" type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image2">
                     @if($image2)
-                        <img src="{{ $image2->temporaryUrl() }}" style="width:30px" class="" alt="">
+                        <div class="prod-preview">
+                            <img src="{{ $image2->temporaryUrl() }}" class="" alt="">
+                        </div>
                     @endif
                     @error('image2')
                         <p style="text-color:red;">{{ $message }}</p>
                     @enderror
                 </div>
                 <!-- Image 3 -->
-                <div class="input-field">
-                    <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image3">
+                <div class="input-field-img">
+                    <input class="img-layout" type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image3">
                     @if($image3)
-                        <img src="{{ $image3->temporaryUrl() }}" style="width:30px" class="" alt="">
+                        <div class="prod-preview">
+                            <img src="{{ $image3->temporaryUrl() }}" class="" alt="">
+                        </div>
                     @endif
                     @error('image3')
                         <p style="text-color:red;">{{ $message }}</p>
                     @enderror
                     </div>
                 <!-- Image 4 -->
-                <div class="input-field">
-                    <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image4">
+                <div class="input-field-img">
+                    <input class="img-layout" type="file" name="" id="" placeholder="Product Name" required autocomplete="off" wire:model="image4">
                     @if($image4)
-                        <img src="{{ $image4->temporaryUrl() }}" style="width:30px" class="" alt="">
+                        <div class="prod-preview">
+                            <img src="{{ $image4->temporaryUrl() }}" class="" alt="">
+                        </div>
                     @endif
                     @error('image4')
                         <p style="text-color:red;">{{ $message }}</p>

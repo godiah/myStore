@@ -12,6 +12,9 @@ body{
     margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .admin-prod-item {
   display: flex;
@@ -21,6 +24,7 @@ body{
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
+  width: 100%;
 }
 .admin-prod-item-image {
   flex: 0 0 100px;
@@ -73,4 +77,18 @@ body{
 .fa-cart-shopping{
     margin-right: 3px;
     padding-right: 2px;
+}
+.img-layout{
+  margin: auto;
+}
+.prod-preview{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.prod-preview img{
+  width: inherit !important ;
+  height :inherit! important;; 
+  object-fit: contain;
+  
 }

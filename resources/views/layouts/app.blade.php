@@ -27,6 +27,8 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>My Store</title>
     <link rel="icon" type="image/x-icon" href="images/icons8-shopify.png" />
     @livewireStyles
@@ -81,7 +83,7 @@
             @auth
                 @if(Auth::user()->utype=='ADM')
                     <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>{{Auth::user()->name}}
+                    <span class="material-symbols-outlined">person</span>{{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
                         <li>
@@ -101,7 +103,7 @@
                     </ul>
                 @else
                 <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>{{Auth::user()->name}}
+                    <span class="material-symbols-outlined">person</span>{{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
                         <li>
@@ -119,7 +121,7 @@
             @else
 
                 <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>Account
+                    <span class="material-symbols-outlined">person</span></i>Account
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item hm-sgn-in" href="{{route('login')}}">Sign In</a></li>

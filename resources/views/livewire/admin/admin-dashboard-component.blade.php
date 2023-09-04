@@ -5,12 +5,7 @@
   <!-- Header -->
    <header class="header">
      <div class="menu-icon" onclick="openSidebar()">
-       <span class="material-icons-outlined" style="cursor: pointer; 
-     vertical-align: middle;
-     font-size: 20px;
-     padding-top: 30px;
-     transition: all 0.3s;
-     color: #195190FF;">menu</span>
+       <span class="material-icons-outlined" style="cursor: pointer; vertical-align: middle; font-size: 20px; padding-top: 30px; transition: all 0.3s; color: #195190FF;">menu</span>
      </div>
      <div class="header-left">    
        <i class="fa-solid fa-magnifying-glass"></i>
