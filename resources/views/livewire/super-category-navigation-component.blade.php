@@ -30,6 +30,13 @@
     </style>
     <div>
       <ul class="list-container">
+            <li>
+                <div class="di_sup_cat">
+                <a href="{{route('shop')}}">
+                    Shop
+                </a>
+                </div>
+            </li>
           @foreach ($supcategories as $supcategory)
               <li>
                   <div class="di_sup_cat">
@@ -66,7 +73,14 @@
                   </div>
               </li>
           @endforeach
-      </ul>
+          <li>
+                <div class="di_sup_cat">
+                <a href="#footer">
+                    Contact Us
+                </a>
+                </div>
+            </li>
+        </ul>
     </div>
     
 
