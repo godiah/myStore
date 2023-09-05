@@ -96,9 +96,7 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-user"></i>Dashboard</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Products</a></li>
                         <!-- <li><a class="dropdown-item" href="{{route('admin.categories')}}"><i class="fa-solid fa-basket-shopping"></i>Categories</a></li> -->
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Customers</a></li>
                         <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
                     </ul>
                 @else
@@ -135,208 +133,19 @@
         </div>
         <div class="border-login"></div>
           @livewire('cart-icon-component')
-        <!-- <a href="cart.html">
-          <i class="crt fa-solid fa-cart-shopping"></i>
-          <sup>2</sup> Cart/Ksh0.00
-        </a>           -->
+        <!-- 
+          <a href="cart.html">
+            <i class="crt fa-solid fa-cart-shopping"></i>
+            <sup>2</sup> Cart/Ksh0.00
+          </a>
+        -->
       </div>
       <!-- <div>
         <a href="cart.html" class="cart-sm d-xl-none d-lg-none d-md-none"><i class="fa-solid fa-cart-shopping mx-1"></i><sup>1</sup></a>
       </div> -->
     </div>
 
-    <!-- Main Navigation Bar -->
-    <nav class="sticky-nav">
-      <div class="wrapper">
-        <input type="radio" name="slider" id="menu-btn">
-        <input type="radio" name="slider" id="close-btn">
-        <ul class="nav-links">
-          <!-- <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label> -->
-          <li><a href="{{route('shop')}}">Shop</a></li>
-          <!-- Computer Accesories -->
-          <li>
-            <a href="shop_accessories.html" class="desktop-item">Accesories <i class="fa-solid fa-caret-down"></i></a>
-            <input type="checkbox" id="showMega">
-            <label for="showMega" class="mobile-item">Accesories</label>
-            <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" class="mx-4" id="row-header"><b>Computer Accesories</b></a></li>
-                  <li><a href="#" class="mx-4">Headphones</a></li>
-                  <li><a href="#" class="mx-4">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-4">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-4">Webcam</a></li>
-                  <li><a href="#" class="mx-4">VGA Cables</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Storage</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Internal Hard Disk HDD</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Network Accesories</b></a></li>
-                  <li><a href="#">Patch Panel</a></li>                  
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">USB Cables</a></li>
-                  <li><a href="#">HDMI</a></li>
-                  <li><a href="#">Surge Protector</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
-            </div>
-            </div>
-          </li>
-          <!-- Computing -->
-          <li>
-            <a href="shop_computing.html" class="desktop-item">Computing <i class="fa-solid fa-caret-down"></i></a>
-            <input type="checkbox" id="showMega">
-            <label for="showMega" class="mobile-item">Computing</label>
-            <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" class="mx-4" id="row-header"><b>Laptops</b></a></li>
-                  <li><a href="#" class="mx-4">DELL Laptops</a></li>
-                  <li><a href="#" class="mx-4">HP Laptops</a></li>
-                  <li><a href="#" class="mx-4">Lenovo Laptops</a></li>
-                  <li><a href="#" class="mx-4">Asus Laptops</a></li>
-                  <li><a href="#" class="mx-4">Refurbished Laptops</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Desktop Computers</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Printers & Scanners</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">USB Cables</a></li>
-                  <li><a href="#">HDMI</a></li>
-                  <li><a href="#">Surge Protector</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
-            </div>
-            </div>
-          </li>
-          <!-- Electronics -->
-          <li>
-            <a href="shop_electronics.html" class="desktop-item">Electronics <i class="fa-solid fa-caret-down"></i></a>
-            <input type="checkbox" id="showMega">
-            <label for="showMega" class="mobile-item">Electronics</label>
-            <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" class="mx-4" id="row-header"><b>Cameras</b></a></li>
-                  <li><a href="#" class="mx-4">Headphones</a></li>
-                  <li><a href="#" class="mx-4">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-4">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-4">Webcam</a></li>
-                  <li><a href="#" class="mx-4">VGA Cables</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>TVs</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Mobile Phones</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">USB Cables</a></li>
-                  <li><a href="#">HDMI</a></li>
-                  <li><a href="#">Surge Protector</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
-            </div>
-            </div>
-          </li>
-          <!--  Networking -->
-          <li>
-            <a href="shop_networking.html" class="desktop-item">Networking <i class="fa-solid fa-caret-down"></i></a>
-            <input type="checkbox" id="showMega">
-            <label for="showMega" class="mobile-item">Networking</label>
-            <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" class="mx-4" id="row-header"><b>TP Link</b></a></li>
-                  <li><a href="#" class="mx-4">Headphones</a></li>
-                  <li><a href="#" class="mx-4">Laptop Chargers</a></li>
-                  <li><a href="#" class="mx-4">Laptop Batteries</a></li>
-                  <li><a href="#" class="mx-4">Webcam</a></li>
-                  <li><a href="#" class="mx-4">VGA Cables</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>Tenda</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#" id="row-header"><b>DP Link</b></a></li>
-                  <li><a href="#">Flash Drives</a></li>
-                  <li><a href="#">Memory Cards</a></li>
-                  <li><a href="#">Solid State Devices SSD</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">USB Cables</a></li>
-                  <li><a href="#">HDMI</a></li>
-                  <li><a href="#">Surge Protector</a></li>
-                  <li><a href="#">Speakers</a></li>
-                </ul>
-              </div>
-            </div>
-            </div>
-          </li>
-          <!-- Contact Us -->
-          <li><a href="contact_us.html">Contact Us</a></li>           
-        </ul>
-        <!-- <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label> -->
-      </div>
-    </nav>          
+             
 
   {{$slot}}
 
