@@ -12,6 +12,6 @@ class SuperCategory extends Model
 
     public function categories()
     {
-        return $this->hasMany(Category::class,'category_id');
+        return $this->hasMany(Category::class,'sup_category_id');
     }
 }
