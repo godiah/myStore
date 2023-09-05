@@ -19,7 +19,7 @@ class CategoryFactory extends Factory
     {
         $category_name=$this->faker->unique()->words($nb=2,$asText=true);
         $slug = Str::slug($category_name,'-');
-        $sup_cat_id = $this->faker->numberBetween(1,3);
+        $sup_cat_id = $this->faker->numberBetween(1,4);
 
 
         return [
