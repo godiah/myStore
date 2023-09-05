@@ -144,7 +144,7 @@
         <a href="cart.html" class="cart-sm d-xl-none d-lg-none d-md-none"><i class="fa-solid fa-cart-shopping mx-1"></i><sup>1</sup></a>
       </div> -->
     </div>
-
+    @livewire('super-category-navigation-component')
              
 
   {{$slot}}
