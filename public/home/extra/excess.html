@@ -225,3 +225,37 @@
         <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
       </div>
     </nav> -->
+
+    <!-- #rd iteration of main nav -->
+
+    <div>
+      <ul>
+          @foreach ($supcategories as $supcategory)
+              <li>
+                  <a href="#" class="desktop-item" 
+                     wire:mouseover="showCategories({{ $supcategory->id }}, null)"
+                     wire:mouseout="showCategories(null, null)">
+                      {{ $supcategory->name }} <i class="fa-solid fa-caret-down"></i>
+                  </a>
+  
+                  <ul class="{{ $selectedSupcategory == $supcategory->id ? 'visible' : 'hidden' }}">
+                      @foreach ($supcategory->categories as $category)
+                          <li>
+                              <a href="#" 
+                                 wire:mouseover="showCategories({{ $supcategory->id }}, {{ $category->id }})"
+                                 wire:mouseout="showCategories({{ $supcategory->id }}, null)">
+                                  {{ $category->name }} <i class="fa-solid fa-caret-down"></i>
+                              </a>
+          <!-- class="{{ $selectedCategory == $category->id ? 'visible' : 'hidden' }}" -->
+                              <ul >
+                                  @foreach ($category->subcategories as $subcategory)
+                                      <li><a href="#" class="mx-4">{{ $subcategory->name }}</a></li>
+                                  @endforeach
+                              </ul>
+                          </li>
+                      @endforeach
+                  </ul>
+              </li>
+          @endforeach
+      </ul>
+  </div>
