@@ -33,9 +33,9 @@ class ProductFactory extends Factory
             'image2'=>$this->faker->numberBetween(1,5),
             'image3'=>$this->faker->numberBetween(1,5),
             'image4'=>$this->faker->numberBetween(1,5),
-            'sup_category_id'=>$this->faker->numberBetween(1,3),
-            'category_id'=>$this->faker->numberBetween(1,5),
-            'sub_category_id'=>$this->faker->numberBetween(1,20)
+            'sup_category_id'=>$this->faker->numberBetween(1,4),
+            'category_id'=>$this->faker->numberBetween(1,10),
+            'sub_category_id'=>$this->faker->numberBetween(1,30)
 
         ];
     }
