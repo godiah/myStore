@@ -19,7 +19,7 @@
     </div>
 
     <!-- Browse Our Categories -->
-    <section class="category_layout">
+    <!-- <section class="category_layout">
       <div class="heading_center container">
         <h2><span>Our Categories</span></h2>
       </div>
@@ -43,63 +43,36 @@
             <a href="shop_networking.html"><img src="images/product1.jpg" alt="Product Image"></a>
             <h5><b>Networking</b></h5>
           </div>
-        <!-- Add more category cards here -->
         </div>                    
       </div>
-    </section>
+    </section> -->
 
     <!-- Best Selling Products -->
+    @foreach ($supcategories as $supcategory)
     <section class="category_layout">
       <div class="heading_center container">                
-        <h2><span>Best Selling Products</span></h2>
+        <h2><span>{{$supcategory->name}} Products</span></h2>
       </div>
     </section>
     <section class="best-selling-product"> 
       <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
       <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
       <div class="best-selling-product-container">
+        @foreach ($supcategory->products as $product)
         <div class="best-selling-product-card">
           <div class="best-selling-product-image">
-            <img src="images/product1.jpg" class="product-thumb" alt="">
+            <img src="{{asset('images/')}}/{{$product->image}}.jpg" class="product-thumb" alt="">
           </div>
           <div class="best-selling-product-info">
-            <h2 class="best-selling-product-brand">UGREEN Bluetooth 5.3 USB Adapter CM591</h2>
-            <p class="product-short-description"><a href="product_details.html">ASUS E410MA-BV1517, Intel Celeron N4020, 4GB DDR4 2666, 256GB SSD</a></p>
-            <span class="best-selling-price">Ksh999.99</span>
+            <h2 class="best-selling-product-brand">{{$product->name}}</h2>
+            <p class="product-short-description"><a href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->short_description}}</a></p>
+            <span class="best-selling-price">{{$product->regular_price}}</span>
           </div>
         </div>
-        <div class="best-selling-product-card">
-          <div class="best-selling-product-image">
-            <img src="images/hp.webp" class="product-thumb" alt="">
-          </div>
-          <div class="best-selling-product-info">
-            <h2 class="best-selling-product-brand">UGREEN Bluetooth 5.3 USB Adapter CM591</h2>
-            <p class="product-short-description"><a href="product_details.html">ASUS E410MA-BV1517, Intel Celeron N4020, 4GB DDR4 2666, 256GB SSD</a></p>
-            <span class="best-selling-price">Ksh999.99</span>
-          </div>
-        </div>
-        <div class="best-selling-product-card">
-          <div class="best-selling-product-image">
-            <img src="images/hp2.png" class="product-thumb" alt="">
-          </div>
-          <div class="best-selling-product-info">
-            <h2 class="best-selling-product-brand">UGREEN Bluetooth 5.3 USB Adapter CM591</h2>
-            <p class="product-short-description"><a href="product_details.html">ASUS E410MA-BV1517, Intel Celeron N4020, 4GB DDR4 2666, 256GB SSD</a></p>
-            <span class="best-selling-price">Ksh999.99</span>
-          </div>
-        </div>
-        <div class="best-selling-product-card">
-          <div class="best-selling-product-image">
-            <img src="images/product1.jpg" class="product-thumb" alt="">
-          </div>
-          <div class="best-selling-product-info">
-            <h2 class="best-selling-product-brand">UGREEN Bluetooth 5.3 USB Adapter CM591</h2>
-            <p class="product-short-description"><a href="product_details.html">ASUS E410MA-BV1517, Intel Celeron N4020, 4GB DDR4 2666, 256GB SSD</a></p>
-            <span class="best-selling-price">Ksh999.99</span>
-          </div>
-        </div>  
+        @endforeach  
       </div>
     </section>
+    @endforeach
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
