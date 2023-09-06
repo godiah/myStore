@@ -14,4 +14,8 @@ class SuperCategory extends Model
     {
         return $this->hasMany(Category::class,'sup_category_id');
     }
+    public function products()
+    {
+        return $this->hasMany(Product::class,'sup_category_id');
+    }
 }
