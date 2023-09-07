@@ -187,7 +187,8 @@ main #home-hero .heading {
   letter-spacing: 1px;
   color: #001233;
 }
-.heading_center::before, .heading_center::after{
+.heading_center::before, 
+.heading_center::after{
   content: "";
   display: block;
   height: 1px;

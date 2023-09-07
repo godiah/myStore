@@ -1,4 +1,33 @@
 <div>
+  <style>
+    .clear-cart-div{
+       text-align: right;
+    }
+    /* Clear Cart Button Styles */
+.clear-cart-button {
+    display: inline-block;
+    padding: 7px 30px;
+    margin-top: 15px;
+    background-color: #f44336; 
+    color: #fff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-cart-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+.clear-cart-button:focus {
+    outline: none; /* Remove the default focus outline */
+}
+
+  </style>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     <div class="cart-title">
     <h3>Shopping Cart</h3>
@@ -69,8 +98,10 @@
           <p>No items in your cart</p>
         </div>
       @endif
-      <div>
-        <a href="#" wire:click.prevent="clearAll()">Clear Cart</a>
+      <div class="clear-cart-div">
+        <a class="clear-cart-button" href="#" wire:click.prevent="clearAll()">
+          <span class="material-symbols-outlined">delete</span>Clear Cart
+        </a>
       </div>
       <div class="mt-4">
         <a href="{{route('shop')}}" id="continue-shop-btn" class="continue-shop-btn"><i class="fa-solid fa-arrow-left"></i>Continue Shopping</a>

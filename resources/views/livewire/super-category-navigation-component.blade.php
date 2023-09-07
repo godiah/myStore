@@ -23,10 +23,11 @@
     /* Base Styles */
     .super-main-navbar {
         position: sticky;
-        z-index: 99;
+        z-index: 100;
         background: #000;
         margin-left: 2%;
         margin-right: 2%;
+        top: 0;
     }
 
     ul.list-container {
