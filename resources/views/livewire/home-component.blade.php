@@ -66,7 +66,7 @@
           <div class="best-selling-product-info">
             <h2 class="best-selling-product-brand">{{$product->name}}</h2>
             <p class="product-short-description"><a href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->short_description}}</a></p>
-            <span class="best-selling-price">{{$product->regular_price}}</span>
+            <span class="best-selling-price">Ksh. {{$product->regular_price}}</span>
           </div>
         </div>
         @endforeach  
@@ -75,6 +75,25 @@
     @endforeach
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    const productContainers = [...document.querySelectorAll('.best-selling-product-container')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+    
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+      
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
+  })
+  </script>
 <script>
     $(document).ready(function () {
         $('.desktop-item').hover(

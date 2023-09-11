@@ -12,7 +12,7 @@
      </div>
      <div class="header-right">   
        <i class="fa-regular fa-bell"></i>
-       <i class="fa-regular fa-envelope"></i>
+       <i class="fa-solid fa-envelopes-bulk"></i>
        <i class="fa-regular fa-user"></i>
      </div>
    </header>

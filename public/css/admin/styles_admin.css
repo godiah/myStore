@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -64,7 +64,7 @@ body{
     color: #195190FF;
 }
 .fa-bell,
-.fa-envelope,
+.fa-envelopes-bulk
 .fa-user{
     vertical-align: middle;
     font-size: 20px;

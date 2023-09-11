@@ -1,6 +1,8 @@
+
  <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
+    <h1 class="text-white text-center">Log in</h1>
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -33,7 +35,7 @@
         </div>
 
         <div>
-            <a href="{{route('register')}}">Sign up</a>
+            <a href="{{route('register')}}" class="text-white">Sign up</a>
         </div>
 
         <div class="flex items-center justify-end mt-4">
