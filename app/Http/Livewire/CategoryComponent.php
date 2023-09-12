@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\SuperCategory;
+use App\Models\SubCategory;
 use Livewire\WithPagination;
 use Cart;
 // use Livewire\Component;
@@ -14,6 +16,8 @@ class CategoryComponent extends Component
 {
     use WithPagination;
     public $slug;
+    public $sup_slug;
+    public $sub_slug;
     public $pageSize=10;
     public $orderBy="Default Sorting";
 
@@ -70,6 +74,18 @@ class CategoryComponent extends Component
 
 
         $categories=Category::orderBy('name','ASC')->get();
-        return view('livewire.category-component',['products'=>$products,'categories'=>$categories, 'category_id'=>$category_id,'category_name'=>$category_name]);
+        // $supercategories=SuperCategory::orderBy('name','ASC')->get();
+        // $subcategories=SubCategory::orderBy('name','ASC')->get();
+
+        return view('livewire.category-component',
+            [
+                'products'=>$products,
+                'categories'=>$categories, 
+                'category_id'=>$category_id,
+                'category_name'=>$category_name,
+                // 'supercategories'=>$supercategories,
+                // 'subcategories'=>$subcategories
+            ]
+        );
     }
 }
