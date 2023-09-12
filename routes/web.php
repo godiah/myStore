@@ -6,8 +6,11 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\SuperCategoryComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\SubCategoryComponent;
+
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\WishlistComponent;
 
@@ -40,7 +43,9 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 Route::get('/',HomeComponent::class)->name('home.index');
 Route::get('/shop',ShopComponent::class)->name('shop');
 Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
+Route::get('/supercategory/{sup_slug}',SuperCategoryComponent::class)->name('supcategory.products');
 Route::get('/category/{slug}',CategoryComponent::class)->name('category.products');
+Route::get('/subcategory/{sub_slug}',SubCategoryComponent::class)->name('subcategory.products');
 Route::get('/wishlist',WishlistComponent::class)->name('shop.wishlist');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
 Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
