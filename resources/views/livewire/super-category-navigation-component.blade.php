@@ -157,7 +157,7 @@
           @foreach ($supcategories as $supcategory)
               <li>
                   <div class="di_sup_cat">
-                      <a class="super_nav_link" href="#" wire:mouseover="showCategories({{ $supcategory->id }}, null)"
+                      <a class="super_nav_link" href="{{route('supcategory.products',['sup_slug'=>$supcategory->slug])}}" wire:mouseover="showCategories({{ $supcategory->id }}, null)"
                         wire:mouseout="showCategories(null, null)">
                           {{ $supcategory->name }} <i class="fa-solid fa-caret-down"></i>
                       </a>                  
@@ -166,11 +166,11 @@
                       <ul class="{{ $selectedSupcategory == $supcategory->id ? 'visible' : 'hidden' }}">
                         @foreach ($supcategory->categories as $category)
                             <li class="list-item">
-                                <!-- wire:mouseover="showCategories({{ $supcategory->id }}, {{ $category->id }})"
+                                    <!-- wire:mouseover="showCategories({{ $supcategory->id }}, {{ $category->id }})"
                                       wire:mouseout="showCategories({{ $supcategory->id }}, null)" -->
                                 <div class="di_cat " wire:mouseover="showCategories({{ $supcategory->id }}, {{ $category->id }})"
                                       wire:mouseout="showCategories({{ $supcategory->id }}, null)">
-                                    <a href="#" 
+                                    <a href="{{route('category.products',['slug'=>$category->slug])}}" 
                                       class="cat_gory text-danger">
                                         {{ $category->name }} <i class="fa-solid fa-caret-down"></i>
                                     </a>
@@ -179,7 +179,7 @@
                                   <ul >
                                       @foreach ($category->subcategories as $subcategory)
                                           <li>
-                                              <a href="#" class="mx-3 text-black">{{ $subcategory->name }}</a>
+                                              <a href="{{route('subcategory.products',['sub_slug'=>$subcategory->slug])}}" class="mx-3 text-black">{{ $subcategory->name }}</a>
                                           </li>
                                       @endforeach
                                   </ul>

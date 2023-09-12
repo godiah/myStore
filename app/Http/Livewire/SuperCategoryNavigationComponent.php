@@ -23,6 +23,7 @@ class SuperCategoryNavigationComponent extends Component
     //     $this->selectedSupcategory = $supcategoryId;
     //     $this->selectedCategory = $categoryId;
     // }
+    // 
     public function showCategories($supcategoryId, $categoryId)
     {
         $this->selectedSupcategory = $supcategoryId;
