@@ -1,0 +1,112 @@
+.category_layout-swiper{
+  visibility: hidden;
+}
+.swiper {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  padding: 5px;
+  visibility: hidden;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 250px;
+  height:100%;
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 7px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.swiper-best-selling-product-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  overflow: hidden;
+}
+.swiper-product-thumb {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-best-selling-product-info {
+  width: 100%;
+  padding: 3px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+.swiper-best-selling-product-brand {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  color: #001233;
+}
+.swiper-product-short-description {
+  width: 100%; 
+  opacity: 0.5;
+  margin: 5px 0;  
+  text-align: center;
+}
+.swiper-product-short-description a{
+  font-size: 14px;
+  text-decoration: none;
+}
+.swiper-best-selling-price {
+  font-weight: 900;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #001233;  
+}
+
+/* Media Queries */
+
+/* Small Screens --- Phone devices */
+@media only screen and (max-width:599px){
+  .category_layout-swiper{
+    visibility: visible;
+  }
+  .swiper {
+    visibility: visible;
+  }
+  .category_layout{
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .best-selling-product{
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0 !important;
+  }
+}
+@media only screen and (min-width:600px){
+  .category_layout-swiper{
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .swiper {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}

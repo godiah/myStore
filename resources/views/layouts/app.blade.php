@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{asset('css/shopping-cart.css')}}">
     <link rel="stylesheet" href="{{asset('css/wishlist.css')}}">
     <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
+    <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
 
     <link rel="stylesheet" href="{{asset('css/admin/styles_admin.css')}}">
 
@@ -29,6 +30,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Swiper JS -->
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
     <title>My Store</title>
     <link rel="icon" type="image/x-icon" href="images/icons8-shopify.png" />
     @livewireStyles

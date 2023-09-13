@@ -19,12 +19,13 @@
   display: none;
 }
 .best-selling-product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   min-width: 22%;  /* adjust width here */
-  height:100%;
+  /* height:100%; */
   min-height: 350px;
   max-height: 350px;
   margin-right: 5px;
@@ -42,8 +43,8 @@
 .best-selling-product-image {
   position: relative;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 55%;
+  object-fit: contain;
   overflow: hidden;
 }
 .product-thumb {
@@ -55,7 +56,7 @@
 }
 .best-selling-product-info {
   width: 100%;
-  /* height: 100px; */
+  height: 45%;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #fff;
@@ -69,26 +70,33 @@
 }
 .product-short-description {
   width: 100%; 
+  height: 50%;
   opacity: 0.5;
   margin: 5px 0;  
-  text-align: center;
-  /* padding: 0 10px;
-  white-space: nowrap; 
+  text-align: center;  
   overflow: hidden; 
-  text-overflow: ellipsis; */
+}
+.product-short-description ::-webkit-scrollbar-track{
+  display: none;
 }
 
 .product-short-description a{
   font-size: 14px;
   text-decoration: none;
+  /* text-align: center;  
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;  */
 }
 .best-selling-price {
   font-weight: 900;
   font-size: 16px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 0;
   text-align: center;
-  color: #001233;  
+  color: #001233; 
+  position: absolute;
+  bottom: 2px;
 }
 .pre-btn,
 .nxt-btn {
@@ -122,4 +130,44 @@
 .pre-btn:hover img,
 .nxt-btn:hover img {
   opacity: 1;
+}
+
+/* Media Queries */
+
+/* Small Screens --- Phone devices */
+@media only screen and (max-width:599px){
+  .best-selling-product-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .heading_center{
+    font-size: 14px;
+  }
+  .best-selling-product-card{
+    min-width: 30%;
+    min-height: 350px;
+    max-height: 350px;
+  }
+}
+
+/* == Small Devices/Potrait == */
+@media (min-width:600px) and (max-width:767px){
+  .best-selling-product-card{
+    min-width: 32%;
+    min-height: 350px;
+    max-height: 350px;
+  }
+  .best-selling-product-brand{
+    font-size: 13px;
+  }
+}
+
+/* == Medium Devices/Landscacpe == */
+@media (min-width:768px) and (max-width:970px){
+  .best-selling-product-card{
+    min-width: 35%;
+    min-height: 350px;
+    max-height: 350px;
+  }
 }

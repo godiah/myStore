@@ -440,6 +440,9 @@ form input[type="submit"]:focus {
 /* == Extra Small Devices/Phones == */
 @media only screen and (max-width:599px){
   /* Hero Section */
+  main #home-hero{
+    max-height: 38dvh;
+  }
   .main-hero{
     text-align: center;    
   }
@@ -503,7 +506,7 @@ form input[type="submit"]:focus {
     margin: 0;
   }
   .best-selling-price{
-    font-size: 14px;
+    font-size: 13px;
   }
   .best-selling-actual-price{
     font-size: 14px;
@@ -566,35 +569,12 @@ form input[type="submit"]:focus {
     font-size: 12px;
   }
 }
-/* .nav-active{
-    transform: translateX(0%);
-}
-@keyframes navLinkFade {
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    
-}
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-.toggle .line2{
-    opacity: 0;    
-}
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);    
-} */
 
 /* == Small Devices/Potrait == */
 @media (min-width:600px) and (max-width:767px){
   .main-hero{
-    text-align: center;    
+    text-align: center; 
+    height: 40dvh;   
   }
   .horizon-line h3{
     font-size: 18px;
@@ -702,7 +682,10 @@ form input[type="submit"]:focus {
 /* == Medium Devices/Landscacpe == */
 @media (min-width:768px) and (max-width:970px){
   .main-hero{
-    text-align: center;    
+    text-align: center;        
+  }
+  main #home-hero{
+    height: 40dvh;
   }
   .horizon-line h3{
     font-size: 18px;

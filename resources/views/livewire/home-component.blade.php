@@ -73,9 +73,46 @@
       </div>
     </section>
     @endforeach
+
+    <!-- Best selling (Mobile Devices) -->
+    @foreach ($supcategories as $supcategory)
+    <section class="category_layout-swiper">
+      <div class="heading_center container">                
+        <h2><span>{{$supcategory->name}} Products</span></h2>
+      </div>
+    </section>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        @foreach ($supcategory->products as $product)
+        <div class="swiper-slide">
+          <div class="swiper-best-selling-product-image">
+              <img src="{{asset('images/')}}/{{$product->image}}.jpg" class="swiper-product-thumb" alt="">
+          </div>
+          <div class="swiper-best-selling-product-info">
+              <h2 class="swiper-best-selling-product-brand">{{$product->name}}</h2>
+              <p class="swiper-product-short-description"><a href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->short_description}}</a></p>
+              <span class="swiper-best-selling-price">Ksh. {{$product->regular_price}}</span>
+          </div>
+        </div>
+        @endforeach
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    @endforeach
+
+
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  <!-- Image Slider -->
   <script>
     const productContainers = [...document.querySelectorAll('.best-selling-product-container')];
     const nxtBtn = [...document.querySelectorAll('.nxt-btn')];

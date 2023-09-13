@@ -108,7 +108,7 @@
     /* Mobile Styles */
     @media screen and (max-width: 970px) {
         .super-main-navbar .list-container {
-            flex-direction: column;
+            display: none;
         }
 
         .super-main-navbar .list-container .di_sup_cat {
