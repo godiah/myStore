@@ -23,10 +23,12 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('residence')->nullable();
             $table->string('country')->default('Kenya');
-            $table->string('county');
+            $table->string('county')->nullable();
             $table->string('subcounty')->nullable();
-            $table->string('town');
-            $table->string('specificarea');
+            $table->string('town')->nullable();
+            $table->string('specificarea')->nullable();
+            $table->string('streetname')->nullable();
+            $table->string('aptnumber')->nullable();
             $table->text('addinfo')->nullable();
             $table->timestamps();
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('order_id')->unsigned();
-            $table->enum('mode',['cod','mpesa','card']);
+            $table->enum('mode',['cash-on-delivery','lipa-na-m-pesa','card','direct-bank-transfer']);
             $table->enum('status',['pending','approved','declined','refunded'])->default('pending');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');

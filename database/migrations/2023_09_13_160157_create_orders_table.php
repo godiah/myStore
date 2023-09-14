@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->decimal('subtotal',8,2,'.', ',')->nullable();
+            $table->decimal('subtotal',12,2,'.', ',')->nullable();
             // $table->decimal('discount')->default (0);
-            $table->decimal('tax')->nullable();
-            $table->decimal('total',12,2)->nullable();
+            $table->decimal('tax',12,2,'.', ',')->nullable();
+            $table->decimal('total',12,2,'.', ',')->nullable();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('mobile');
@@ -31,6 +31,8 @@ return new class extends Migration
             $table->string('subcounty')->nullable();
             $table->string('town');
             $table->string('specificarea');
+            $table->string('streetname');
+            $table->string('aptnumber');
             $table->text('addinfo')->nullable();
             $table->enum('status', ['ordered', 'delivered', 'canceled'])->default('ordered');
             $table->boolean ('is_shipping_different')->default(false);
