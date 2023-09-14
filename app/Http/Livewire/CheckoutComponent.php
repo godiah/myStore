@@ -157,7 +157,7 @@ class CheckoutComponent extends Component
             $shipping->addinfo = $this->s_addinfo;
             $shipping->save();
         }
-
+// 
         if ($this->paymentmode == 'cash-on-delivery') {
             # code...
             $transaction= new Transaction();
