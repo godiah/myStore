@@ -48,7 +48,7 @@ Route::get('/category/{slug}',CategoryComponent::class)->name('category.products
 Route::get('/subcategory/{sub_slug}',SubCategoryComponent::class)->name('subcategory.products');
 Route::get('/wishlist',WishlistComponent::class)->name('shop.wishlist');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
-Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
+Route::get('/checkout',CheckoutComponent::class)->name('checkout');
 
 Route::get('/search',SearchComponent::class)->name('products.search');
 // Route::get('/', function () {
