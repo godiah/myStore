@@ -134,9 +134,13 @@
           </tr>
         </tbody>
       </table>
-      <div class="checkout-btn">
-        <a href="checkout.html" id="">Proceed to Checkout</a>
-      </div>      
+      <!-- @if (Cart::instance('cart')->count()>0) -->
+        <!-- <div class="checkout-btn" wire:click.prevent="checkout()">
+          <a href="#" id="" wire:click.prevent="checkout">Proceed to Checkout</a>
+        </div> -->
+        <button class="checkout-btn" wire:click.prevent="checkout">Proceed to checkout</button>
+      <!-- @endif -->
+            
     </div>
   </div>
   <!-- Increment and decrement JS -->
