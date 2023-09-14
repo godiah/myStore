@@ -4,8 +4,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #e6e8ed;
-    color: #666666;
+    /* background-color: #e6e8ed;
+    color: #666666; */
 }
 #admin-prod-cont{
     margin-top: 25px;
@@ -30,7 +30,10 @@ body{
   margin-right: 10px;
 }
 .admin-prod-item-image img {
-  width: 100%;
+  width: 75px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: 5px;
 }
 .admin-prod-item-image a img:hover{

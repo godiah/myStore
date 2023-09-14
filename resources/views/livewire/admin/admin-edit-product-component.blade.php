@@ -58,8 +58,8 @@
                 <!-- Product Super Category -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined">Super Category</span>            
-                    <select name="sup_category_id" id="" wire:model="sup_category_id" wire:change="changeCategory">
+                    <span class="material-icons-outlined"><i class="fa-brands fa-slack"></i></span>            
+                    <select name="sup_category_id" id="" placeholder="Super Category" wire:model="sup_category_id" wire:change="changeCategory">
                         <option value="">Select Super Category</option>
                         @foreach ($supcategories as $supcategory)
                             <option value="{{$supcategory->id}}">{{$supcategory->name}}</option>
@@ -88,7 +88,7 @@
                 <!-- Product sub category -->
                 <div class="input-field">
                     <!-- <label for=""></label> -->
-                    <span class="material-icons-outlined">sub category</span>            
+                    <span class="material-icons-outlined"><i class="fa-solid fa-list"></i></span>            
                     <select name="sub_category_id" id="" wire:model="sub_category_id">
                         <option value="">Select Category</option>
                         @foreach ($subcategories as $subcategory)
@@ -105,27 +105,35 @@
                     <input type="text" name="" id="" placeholder="Keywords" required autocomplete="off">
                 </div> -->
                 <!-- Product Images -->
-                <div class="input-field">
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="image" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage">
+                <label for="" class="prod-label">Product Images:</label>
+                <div class="input-field-img">
+                    <!-- <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span> -->
+                    <input class="img-layout" type="file" name="image" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage">
                     @if($newimage)
-                        <img src="{{$newimage->temporaryUrl()}}" class="" style="width:30px" alt="">
-                    @else
-                        <img src="{{asset('images/products')}}/{{$image}}" class="" style="width:30px" alt="">    
-                    @endif    
+                    <div class="prod-preview">
+                        <img src="{{$newimage->temporaryUrl()}}" class=""  alt="Product Picture">
+                    </div>
+                        @else
+                        <div class="prod-preview">
+                            <img src="{{asset('images/products')}}/{{$image}}" class=""  alt="Product Picture">    
+                        </div>
+                        @endif    
                     @error('newimage')
                         <p style="text-color:red;">{{$message}}</p>
                     @enderror
                 </div>
 
                 <!-- Product Image2 -->
-                <div class="input-field">
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="image2" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage2">
+                <div class="input-field-img">
+                    <input class="img-layout" type="file" name="image2" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage2">
                     @if($newimage2)
-                        <img src="{{$newimage2->temporaryUrl()}}" class="" style="width:30px" alt="">
+                        <div class="prod-preview">
+                            <img src="{{$newimage2->temporaryUrl()}}" class=""  alt="">
+                        </div>
                     @else
-                        <img src="{{asset('images/products')}}/{{$image}}" class="" style="width:30px" alt="">    
+                        <div class="prod-preview">
+                            <img src="{{asset('images/products')}}/{{$image}}" class=""  alt="Product Picture"> 
+                        </div>   
                     @endif    
                     @error('newimage2')
                         <p class="" style="text-color:red;">{{$message}}</p>
@@ -133,13 +141,16 @@
                 </div>
 
                 <!-- Product Image3 -->
-                <div class="input-field">
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="image3" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage3">
+                <div class="input-field-img">
+                    <input class="img-layout" type="file" name="image3" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage3">
                     @if($newimage3)
-                        <img src="{{$newimage3->temporaryUrl()}}" class="" style="width:30px" alt="">
+                        <div class="prod-preview">
+                            <img src="{{$newimage3->temporaryUrl()}}" class=""  alt="">
+                        </div>
                     @else
-                        <img src="{{asset('images/products')}}/{{$image}}" class="" style="width:30px" alt="">    
+                        <div class="prod-preview">
+                            <img src="{{asset('images/products')}}/{{$image}}" class="" alt="Product Picture"> 
+                        </div>   
                     @endif    
                     @error('newimage3')
                         <p class="" style="text-color:red;">{{$message}}</p>
@@ -147,13 +158,16 @@
                 </div>
 
                 <!-- Product Image4 -->
-                <div class="input-field">
-                    <span class="material-icons-outlined"><i class="fa-solid fa-image"></i></span>
-                    <input type="file" name="image4" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage4">
+                <div class="input-field-img">
+                    <input class="img-layout" type="file" name="image4" id="" placeholder="Product Name"  autocomplete="off" wire:model="newimage4">
                     @if($newimage4)
-                        <img src="{{$newimage4->temporaryUrl()}}" class="" style="width:30px" alt="">
+                        <div class="prod-preview">
+                            <img src="{{$newimage4->temporaryUrl()}}" class=""  alt="">
+                        </div>
                     @else
-                        <img src="{{asset('images/products')}}/{{$image}}" class="" style="width:30px" alt="">    
+                        <div class="prod-preview">
+                            <img src="{{asset('images/products')}}/{{$image}}" class=""  alt="Product Picture">
+                        </div>    
                     @endif    
                     @error('newimage4')
                         <p class="" style="text-color:red;">{{$message}}</p>

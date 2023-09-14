@@ -65,7 +65,9 @@
           </div>
           <div class="best-selling-product-info">
             <h2 class="best-selling-product-brand">{{$product->name}}</h2>
-            <p class="product-short-description"><a href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->short_description}}</a></p>
+            <div class="overflow-info">
+              <p class="product-short-description"><a class="ov-link" href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->short_description}}</a></p>
+            </div>
             <span class="best-selling-price">Ksh. {{$product->regular_price}}</span>
           </div>
         </div>

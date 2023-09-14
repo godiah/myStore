@@ -15,15 +15,13 @@
                 <h2 class="title">Edit Category Form</h2>
                 <!-- Category Name -->
                 <div class="input-field">
-                    <label for="name">Name</label>
-                    <span class="material-icons-outlined">style</span>
-                    <input type="text" name="name" id="name" required autocomplete="off" wire:model="name" wire:keyup="generateSlug()">
+                    <span class="material-icons-outlined"><i class="fa-brands fa-slack"></i></span>
+                    <input type="text" name="name" id="name" placeholder="Category" required autocomplete="off" wire:model="name" wire:keyup="generateSlug()">
                 </div>  
                 
                 <!-- Category slug -->
                 <div class="input-field">
-                    <label for="slug">slug</label>
-                    <span class="material-icons-outlined">style</span>
+                    <span class="material-icons-outlined"><i class="fa-brands fa-slack"></i></span>
                     <input type="text" name="slug" id="slug" required autocomplete="off"  wire:model="slug">
                 </div>
 

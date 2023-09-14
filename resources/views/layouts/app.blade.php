@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="{{asset('css/wishlist.css')}}">
     <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
     <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
+    <link rel="stylesheet" href="{{asset('css/product_table.css')}}">
 
+    <!-- Admin Dashboard -->
     <link rel="stylesheet" href="{{asset('css/admin/styles_admin.css')}}">
-
     <link rel="stylesheet" href="{{asset('css/admin/all_products.css')}}">
 
     <!-- Font Awesome Icons -->
@@ -34,6 +35,14 @@
     <!-- Swiper JS -->
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script defer>
+      new DataTable('#example');
+    </script>
     
     <title>My Store</title>
     <link rel="icon" type="image/x-icon" href="images/icons8-shopify.png" />
