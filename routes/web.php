@@ -6,6 +6,7 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\ThankyouComponent;
 use App\Http\Livewire\SuperCategoryComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CategoryComponent;
@@ -49,6 +50,7 @@ Route::get('/subcategory/{sub_slug}',SubCategoryComponent::class)->name('subcate
 Route::get('/wishlist',WishlistComponent::class)->name('shop.wishlist');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
 Route::get('/checkout',CheckoutComponent::class)->name('checkout');
+Route::get('/Thank-You',ThankyouComponent::class)->name('thankyou');
 
 Route::get('/search',SearchComponent::class)->name('products.search');
 // Route::get('/', function () {
