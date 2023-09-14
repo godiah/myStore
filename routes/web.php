@@ -16,8 +16,12 @@ use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\WishlistComponent;
 
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\User\UserOrdersComponent;
+use App\Http\Livewire\User\UserOrderDetailsComponent;
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminOrdersComponent;
+use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
@@ -64,6 +68,9 @@ Route::get('/search',SearchComponent::class)->name('products.search');
 // User Group routes
 Route::middleware(['auth'])->group(function(){
     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/orders',UserOrdersComponent::class)->name('user.orders');
+    Route::get('/user/order-details/{order_id}',UserOrderDetailsComponent::class)->name('user.orderdetails');
+
 });
 
 // Admin group routes
@@ -77,6 +84,9 @@ Route::middleware(['auth','authadmin'])->group(function(){
     Route::get('/admin/all-products',AdminProductsComponent::class)->name('admin.products');
     Route::get('/admin/products/add',AdminAddProductsComponent::class)->name('admin.products.add');
     Route::get('/admin/products/edit/{product_id}',AdmineditProductComponent::class)->name('admin.products.edit');
+
+    Route::get('/admin/orders',AdminOrdersComponent::class)->name('admin.orders');
+    Route::get('/admin/order-details/{order_id}',AdminOrderDetailsComponent::class)->name('admin.orderdetails');
 });
 
 Route::middleware('auth')->group(function () {

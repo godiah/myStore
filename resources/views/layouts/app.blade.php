@@ -118,7 +118,7 @@
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{route('user.dashboard')}}"><i class="fa-solid fa-user"></i>My Account</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
+                        <li><a class="dropdown-item" href="{{route('user.orders')}}"><i class="fa-solid fa-basket-shopping"></i>Orders</a></li>
                         <li><a class="dropdown-item" href="wishlist.html"><i class="fa-solid fa-gift"></i>Saved Items</a></li>
                     </ul>
                 @endif

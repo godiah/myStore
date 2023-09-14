@@ -42,7 +42,7 @@
      <a href="{{route('admin.category.add')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">style</span>Add Category</li>
      </a>
-     <a href="#">
+     <a href="{{route('admin.orders')}}">
      <li class="sidebar-list-item"><span class="material-icons-outlined">pending_actions</span>Orders</li>
      </a>
      <a href="#">
@@ -78,7 +78,7 @@
        <!-- Card 2 -->      
        <div class="card">
          <div class="card-inner">
-           <a href="#">
+           <a href="{{route('admin.orders')}}">
            <p class="" style="font-weight: 900; font-size: 18px; color: #006B38FF;">ORDERS</p>
            </a>
            <span class="material-icons-outlined">pending_actions</span>
