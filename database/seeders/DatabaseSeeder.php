@@ -22,6 +22,12 @@ class DatabaseSeeder extends Seeder
             'utype'=>'ADM',
             'password'=>bcrypt('mystoreadmin'),
         ]);
+        \App\Models\User::factory(1)->create([
+            'name' => 'Lewys',
+            'email' => 'mystorelewys@mail.com',
+            'utype'=>'USR',
+            'password'=>bcrypt('mystorelewys'),
+        ]);
         \App\Models\SuperCategory::factory(4)->create();
         \App\Models\Category::factory(10)->create();
         \App\Models\SubCategory::factory(30)->create();
