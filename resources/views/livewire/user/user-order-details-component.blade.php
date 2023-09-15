@@ -137,6 +137,18 @@
                         <td>{{$order->id}}</td>
                     </tr>
                     <tr>
+                        <th>Order Status:</th>
+                        <td>{{$order->status}}</td>
+                    </tr>
+                    <tr>
+                        <th>Delivery Status:</th>
+                        <td>{{$order->delivered_status}}
+                            @if ($order->delivered_status == 'delivered')
+                               on {{$order->delivered_date}}
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
                         <th>Date:</th>
                         <td>{{$order->created_at}}</td>
                     </tr>

@@ -20,7 +20,8 @@ class UserOrderDetailsComponent extends Component
     {
         $order=Order::find($this->order_id);
         $order->status="canceled";
-        $order->canceled_date=now();;
+        $order->delivered_status="canceled";
+        $order->canceled_date=now();
         $order->save();
         session()->flash('order_message','Order has been canceled!!');
     }
