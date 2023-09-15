@@ -110,6 +110,7 @@ class CheckoutComponent extends Component
         $order->addinfo = $this->addinfo;
 
         $order->status = 'ordered';
+        $order->delivered_status = 'pending';
 
         $order->is_shipping_different = $this->ship_to_different? 1:0;
 
