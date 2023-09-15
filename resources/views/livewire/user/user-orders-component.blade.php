@@ -64,7 +64,7 @@
                     <th>Status</th>
                     <th>Payment</th>
                     <th>Action</th>
-                    <th>Status 2</th>
+                    <th>Delivery Status</th>
                     <!-- <th>Action</th> -->
                     <!-- <th>Status</th>
                     <th>Status</th> -->
@@ -88,10 +88,11 @@
                         <!-- <td>{{$order->created_at}}</td> -->
                         <td><a href="{{route('user.orderdetails',['order_id'=>$order->id])}}">details</a></td>
                         <td class="py-2 px-4">
-                            <ul>
+                            {{$order->delivered_status}}
+                            <!-- <ul>
                                 <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'delivered')">Delivered</a></li>
-                                <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Canceled</a></li>
-                            </ul>
+                                <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Cancel</a></li>
+                            </ul> -->
                         </td>
                     </tr>
                 @endforeach
