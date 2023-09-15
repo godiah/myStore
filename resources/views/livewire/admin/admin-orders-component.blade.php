@@ -90,7 +90,7 @@
                         <td class="py-2 px-4">
                             <ul>
                                 <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'delivered')">Delivered</a></li>
-                                <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Canceled</a></li>
+                                <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Cancel</a></li>
                             </ul>
                         </td>
                     </tr>
