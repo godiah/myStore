@@ -39,70 +39,72 @@
           <strong>Success | {{Session::get('success_message')}}</strong>
         </div>
       @endif
+
       @if(Cart::instance('cart')->count()>0)
 
-      <table id="cart">
-          
-        <thead>
-          <tr class="cart-heading">
-            <th></th>
-            <th>PRODUCT</th>
-            <th>PRICE</th>
-            <th>QUANTITY</th>
-            <th>SUBTOTAL</th> 
-            <th>REMOVE</th>           
-          </tr>
-        </thead>
-
-          <tbody>
-              @foreach(Cart::instance('cart')->content() as $item)
-                <tr>
-                  <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-                  <td class="item-name">              
-                    <img class="item-image" src="{{asset('images/')}}/{{$item->model->image}}.jpg" alt="Item Image">
-                    <span>{{$item->model->name}}</span>
-                  </td>
-                  <td class="item-price"><strong>Ksh.{{$item->model->regular_price}}</strong></td>
-                  <td>
-                    <div class="cart-quantity">
-                      <span class="minus decrement-btn"> <a href="#" style="text-decoration: none;"  wire:click.prevent="decreaseQuantity('{{$item->rowId}}')" >-</a> </span>
-                      <span class="num number"> {{$item->qty}} </span>
-                      <span class="plus increment-btn"> <a href="#" style="text-decoration: none;" wire:click.prevent="increaseQuantity('{{$item->rowId}}')">+</a> </span>
-                    </div>
-                  </td>
-                  <td class="sub-total"><strong>Ksh.{{$item->subtotal}}</strong></td>      
-                  <td><a href="#" wire:click.prevent="destroy('{{$item->rowId}}')">delete</a></td>      
-                </tr>
-              @endforeach
+        <table id="cart">
             
-            <!-- <tr>
-              <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
-              <td class="item-name">
-                <img class="item-image" src="{{asset('images/hp.webp')}}" alt="Item Image">
-                <span>ASUS Zenbook Pro Duo 15 OLED UX582ZM-H2901W, Intel Core i9 12900H, 32GB RAM, 1TB SSD</span>
-              </td>
-              <td class="item-price"><strong>Ksh5,500.00</strong></td>
-              <td>
-                <div class="cart-quantity">
-                  <span class="minus"> - </span>
-                  <span class="num"> 1 </span>
-                  <span class="plus"> + </span>
-                </div>
-              </td>
-              <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
-            </tr>                   				 -->
-          </tbody>
-      </table>
+          <thead>
+            <tr class="cart-heading">
+              <th></th>
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>SUBTOTAL</th> 
+              <th>REMOVE</th>           
+            </tr>
+          </thead>
+
+            <tbody>
+                @foreach(Cart::instance('cart')->content() as $item)
+                  <tr>
+                    <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
+                    <td class="item-name">              
+                      <img class="item-image" src="{{asset('images/')}}/{{$item->model->image}}.jpg" alt="Item Image">
+                      <span>{{$item->model->name}}</span>
+                    </td>
+                    <td class="item-price"><strong>Ksh.{{$item->model->regular_price}}</strong></td>
+                    <td>
+                      <div class="cart-quantity">
+                        <span class="minus decrement-btn"> <a href="#" style="text-decoration: none;"  wire:click.prevent="decreaseQuantity('{{$item->rowId}}')" >-</a> </span>
+                        <span class="num number"> {{$item->qty}} </span>
+                        <span class="plus increment-btn"> <a href="#" style="text-decoration: none;" wire:click.prevent="increaseQuantity('{{$item->rowId}}')">+</a> </span>
+                      </div>
+                    </td>
+                    <td class="sub-total"><strong>Ksh.{{$item->subtotal}}</strong></td>      
+                    <td><a href="#" wire:click.prevent="destroy('{{$item->rowId}}')">delete</a></td>      
+                  </tr>
+                @endforeach
+              
+              <!-- <tr>
+                <td><i class="fa-regular fa-circle-xmark delete-btn"></i></td>
+                <td class="item-name">
+                  <img class="item-image" src="{{asset('images/hp.webp')}}" alt="Item Image">
+                  <span>ASUS Zenbook Pro Duo 15 OLED UX582ZM-H2901W, Intel Core i9 12900H, 32GB RAM, 1TB SSD</span>
+                </td>
+                <td class="item-price"><strong>Ksh5,500.00</strong></td>
+                <td>
+                  <div class="cart-quantity">
+                    <span class="minus"> - </span>
+                    <span class="num"> 1 </span>
+                    <span class="plus"> + </span>
+                  </div>
+                </td>
+                <td class="sub-total"><strong>Ksh5,500.00</strong></td>            
+              </tr>                   				 -->
+            </tbody>
+        </table>
+        <div class="clear-cart-div">
+          <a class="clear-cart-button" href="#" wire:click.prevent="clearAll()">
+            <span class="material-symbols-outlined">delete</span>Clear Cart
+          </a>
+        </div>
       @else
         <div>
           <p>No items in your cart</p>
         </div>
       @endif
-      <div class="clear-cart-div">
-        <a class="clear-cart-button" href="#" wire:click.prevent="clearAll()">
-          <span class="material-symbols-outlined">delete</span>Clear Cart
-        </a>
-      </div>
+      
       <div class="mt-4">
         <a href="{{route('shop')}}" id="continue-shop-btn" class="continue-shop-btn"><i class="fa-solid fa-arrow-left"></i>Continue Shopping</a>
       </div>
