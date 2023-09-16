@@ -63,7 +63,7 @@
                   </div>
                   <!-- Additional email -->
                   <div class="address-input">
-                    <label for="input" class="text">Additional Emailr: </label>
+                    <label for="input" class="text">Additional Email: </label>
                     <input type="text" placeholder="Additional Email" name="" class="input" wire:model="email2">
                     @error('email2')
                       <p style="color:red;">{{$message}}</p>
@@ -133,7 +133,7 @@
                   </div> 
                 </div>
                 <!-- Additional Information -->
-                <div class="address-input" id="address-width">
+                <div class="address-input mb-4" id="address-width">
                   <label for="input" class="text">Additional Information: </label>
                   <input type="text" placeholder="Additional Information" name="" class="input" wire:model="addinfo">
                   @error('addinfo')
@@ -148,8 +148,14 @@
                   </div>  -->
               </div>
             </div>
-            <div style="padding:20px;">
+            <!-- <div style="">
               <input type="checkbox" name="" value="1" id="" wire:model="ship_to_different"> <span>Ship to different address?</span>
+            </div> -->
+            <div class="form-check mb-3 mt-3 mx-2">
+              <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" wire:model="ship_to_different">
+              <label class="form-check-label" for="flexCheckDefault">
+                Ship to different address?
+              </label>
             </div>
             @if ($ship_to_different)
               <div class="address-title">
@@ -204,7 +210,7 @@
                   </div>
                   <!-- Additional email -->
                   <div class="address-input">
-                    <label for="input" class="text">Additional Emailr: </label>
+                    <label for="input" class="text">Additional Email: </label>
                     <input type="text" placeholder="Additional Email" name="" class="input" wire:model="s_email2">
                     @error('s_email2')
                       <p style="color:red;">{{$message}}</p>
@@ -274,7 +280,7 @@
                   </div> 
                 </div>
                 <!-- Additional Information -->
-                <div class="address-input" id="address-width">
+                <div class="address-input mb-4" id="address-width">
                   <label for="input" class="text">Additional Information: </label>
                   <input type="text" placeholder="Additional Information" name="" class="input" wire:model="s_addinfo">
                   @error('s_addinfo')
@@ -307,7 +313,6 @@
               </thead>
               <tbody>
                 @foreach(Cart::instance('cart')->content() as $item)
-
                   <tr>
                     <td>{{$item->model->name}} - <span>{{$item->model->short_description}}</span></td>
                     <td><strong>KSh.{{$item->subtotal}}</strong></td>
@@ -323,6 +328,7 @@
             </table>
             <div class="payment-options">
               <h3>Payment Options</h3>
+              <!-- Direct Bank Transfer -->
               <label class="payment-option-label">
                 <input type="radio" name="payment-option" value="direct-bank-transfer"
                   onclick="showPaymentInstructions('direct-bank-transfer')" wire:model="paymentmode">
@@ -334,6 +340,7 @@
                 cleared in our account.<hr>
               </div>
 
+              <!-- Card Payment -->
               <label class="payment-option-label">
                 <input type="radio" name="payment-option" value="card"
                   onclick="showPaymentInstructions('card')" wire:model="paymentmode">
@@ -342,7 +349,8 @@
               <div class="payment-instructions" data-option="card">
                 Coming Soon | Sorry this payment method isn't available at the moment<hr>
               </div>
-              
+
+              <!-- Lipa na Mpesa -->
               <label class="payment-option-label">
                 <input type="radio" name="payment-option" value="lipa-na-m-pesa"
                   onclick="showPaymentInstructions('lipa-na-m-pesa')" wire:model="paymentmode">
@@ -352,7 +360,8 @@
                 Kindly pay through Lipa na MPESA Paybill; Business
                 Number 996488. After payment, kindly forward the Mpesa confirmation text to +254700449778.<hr>
               </div>
-              
+
+              <!-- Cash on Delivery -->
               <label class="payment-option-label">
                 <input type="radio" name="payment-option" value="cash-on-delivery"
                   onclick="showPaymentInstructions('cash-on-delivery')" wire:model="paymentmode">

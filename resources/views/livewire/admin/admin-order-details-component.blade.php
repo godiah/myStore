@@ -5,7 +5,6 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
 
@@ -36,6 +35,12 @@
         }
 
         /* Section styles */
+        .admin-order-detail-title{
+            margin: 0 2%;
+            letter-spacing: .8px;
+            position: relative;
+            font-size: medium;
+        }
         section {
             margin-bottom: 30px;
         }
@@ -75,7 +80,7 @@
         }
 
     </style>
-    <header>
+    <header class="admin-order-detail-title">
         <h2>Admin Orders</h2>
         <a href="{{route('admin.orders')}}">All Orders</a>
     </header>
