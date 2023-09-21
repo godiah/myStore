@@ -1,6 +1,7 @@
 <div>
     <style>
         /* Add styles for the table */
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -43,13 +44,28 @@
         .message {
             color:green;
         }
+
+
+        /* Media Queries */
+
+        @media (max-width: 768px) {
+            table, th, td {
+                font-size: 14px;               
+            }
+            .scrollable-element {
+                scrollbar-color: yellow;
+            }    
+
+        }
+
     </style>
     <main>
         @if(Session::has('order_message'))
             <div class="message">{{Session::get('order_message')}}</div>
         @endif
         <h3 class="text-center mt-2">My Orders</h3>
-        <table class="">
+        <div class="overflow-x-auto ">
+            <table class="table-responsive scrollable-element">
             <thead>
                 <th>Order Id</th>
                 <th>Date</th>
@@ -100,6 +116,7 @@
                 <!-- Add more rows as needed -->
             </tbody>
         </table>
+        </div>
         <div>
         {{$orders->links()}}
         </div>

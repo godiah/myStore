@@ -36,14 +36,14 @@
               <!-- Alert message success added to wishlist and also change color when wishlisted -->
               @if($witems->contains($product->id))
                 <a href="#" wire:click.prevent="removeFromWishlist({{$product->id}})" class="added-to-wishlist">
-                <i class="fa-regular fa-heart"></i>Added to Wishlist
+                <i class="fa-solid fa-check"></i>Added to Wishlist
                 </a>
               @else
                 <a href="" wire:click.prevent="addToWishlist({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"  class="add-to-wishlist"><i class="fa-regular fa-heart"></i>Add to Wishlist</a>
               @endif
             </div>
           </div>
-          <p class="mt-3">Buy at Best and Discounted prices in Nairobi kenya</p>
+          <p class="mt-3 des">Buy at Best and Discounted prices in Nairobi kenya</p>
           <div class="social-icons">
             <span class="whatsapp">
             <i class="fa-brands fa-whatsapp"></i>          
@@ -99,21 +99,13 @@
         <div class="related-product-cards">
             @foreach ($rproducts as $rproduct)
                 <div class="related-product-card">
-                    <a href="{{route('product.details',['slug'=>$rproduct->slug])}}"><img src="{{asset('images/')}}/{{$rproduct->image}}.jpg" alt="Image of {{$rproduct->name}}"></a>
-                    <h5>{{$rproduct->name}}</h5>
-                    <p class="desc">Fanvil X6 High-End VoIP IP Phone 4.3-Inch Color Display</p>
-                    <p class="price">Kshs. {{$rproduct->regular_price}}</p>
-                    <a href="#" class="add-to-cart">Add to Cart</a>
+                  <a href="{{route('product.details',['slug'=>$rproduct->slug])}}"><img src="{{asset('images/')}}/{{$rproduct->image}}.jpg" alt="Image of {{$rproduct->name}}"></a>
+                  <h5>{{$rproduct->name}}</h5>
+                  <p class="desc">Fanvil X6 High-End VoIP IP Phone 4.3-Inch Color Display</p>
+                  <p class="price">Kshs. {{$rproduct->regular_price}}</p>
+                  <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
             @endforeach
-          <!-- <div class="related-product-card">
-            <a href="product_details.html"><img src="{{asset('images/1.jpg')}}" alt="Product Image"></a>
-            <h5>FANVIL IP PHONES</h5>
-            <p class="desc">Fanvil X6 High-End VoIP IP Phone 4.3-Inch Color Display</p>
-            <p class="price">19.99</p>
-            <a href="#" class="add-to-cart">Add to Cart</a>
-          </div>       -->
-        <!-- Add more product cards here -->
         </div>
       </div>
       <!-- <div>More</div> -->

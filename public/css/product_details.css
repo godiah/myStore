@@ -116,6 +116,7 @@
   font-size: 24px;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
 }
 .quantity span.num{
   font-size: 24px;
@@ -395,23 +396,99 @@
     background-color: #fff;
     border-bottom: .4px solid lightgray;
   }
+  .product-image {
+    width: 80%;
+    margin: auto;
+  }
+  .product-image img {
+    width: 100%;
+    border-radius: 5px;    
+  }
   .product-description{
     width: 100%;
     border-right:none;
   }
+  .product-title h5, .product-price{
+    font-size: 14px;
+  }
+  .product-details h6{
+    font-size: 14px;
+  }
+  .product-details ul{
+    padding-left: 10px;
+    font-size: 12px;
+  }
+  .product-details ul li{
+    padding: 2px;
+  }
+  .quantity{
+    width: 55px;
+  }
   .quantity span{
-    width: 80px;
-    font-size: 18px;
+    width: 40px;
+    font-size: 12px;
     cursor: pointer;
   }
   .quantity span.num{
-    font-size: 18px;
+    font-size: 12px;
+  }
+  .product-details .add-to-cart{
+    padding: 8px;
+  }
+  .product-details .add-to-wishlist{
+    padding: 8px;
+  }
+  .product-details .added-to-wishlist{
+    padding: 8px;
+    font-size: 12px;
   }
   .add-to-cart{
+    font-size: 12px;
+  }
+  .add-to-wishlist{
+    font-size: 12px;
+  }
+  .des{
+    font-size: 12px;
+  }
+  .social-icons {
     font-size: 14px;
   }
-  .whatsapp:hover::after {
-    transform: translateX(-25%);
+  .nav-tabs .nav-link.active{
+    font-size: 14px;
+    letter-spacing: .8px;
+  }
+  .tab-info h5{
+    font-size: 14px;
+  }
+  .tab-info p{
+    font-size: 12px;
+  }
+  .tab-info h6{
+    font-size: 12px;
+  }
+  .tab-info ul{
+    padding-left: 10px;
+    font-size: 12px;
+  }
+  .tab-info ul li{
+    padding: 2px;
+  }
+  .similar-products{
+    font-size: 12px;
+  }
+  .related-products h4{
+    font-size: 14px;
+  }
+  .related-product-card h5{
+    font-size: 14px;
+  }
+  .related-product-card p{
+    font-size: 12px;
+  }
+  .related-product-card .add-to-cart{
+    padding: 8px 8px;
+    font-size: 12px;
   }
 }
 
@@ -428,6 +505,14 @@
     gap: 10px;
     background-color: #fff;
     border-bottom: .4px solid lightgray;
+  }
+  .product-image {
+    width: 80%;
+    margin: auto;
+  }
+  .product-image img {
+    width: 100%;
+    border-radius: 5px;    
   }
   .product-description{
     width: 100%;

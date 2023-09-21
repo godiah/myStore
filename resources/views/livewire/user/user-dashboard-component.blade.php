@@ -103,6 +103,62 @@
             padding: 5px;
             text-align: left;
         }
+
+        /* Media Queries */
+
+        @media (max-width: 768px) {
+            .user-dashboard {
+                flex-direction: column;
+            }
+
+            .user-sidebar, .user-account-overview {
+                width: 100%;
+            }
+
+            .user-sidebar {
+                margin-bottom: 20px;
+            }
+
+            .fa-star, .fa-gift , .fa-heart, .fa-clock-rotate-left, .fa-basket-shopping{
+            margin-right: 5px;
+            text-decoration: none;
+            }
+
+            .user-list {
+                margin: 0;
+                padding: 0;
+            }
+
+            .user-list li {
+                padding: 7px 7px;
+                text-align: left;
+            }
+
+            li:hover{
+                color: #001233;
+                transform: scale(1.06) translateY(-.5%);
+                transition: 0.2s ease-in-out;
+            }
+
+            .user-side-links {
+                display: block;
+                font-size: 14px;
+                padding: 0 12px;
+            }
+            .text-danger{
+                font-size: 14px;
+                padding: 0 12px;
+            }
+
+            .user-account-cards {
+                grid-template-columns: 1fr;
+                font-size: 14px;
+            }
+
+            .user-account-card {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 
     <main>
