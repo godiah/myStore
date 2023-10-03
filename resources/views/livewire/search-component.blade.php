@@ -22,33 +22,8 @@
         </p>
       </div>
       <div class="row">
-        <!-- Categories & Products-->
-        <div class="col-md-3">
-          <div class="categories">
-              <h5 class="category-title">Categories</h5>
-              <select>
-                    <option value="all">All Categories</option>
-                    <option value="category1">Category 1</option>
-                    <option value="category2">Category 2</option>
-                    <option value="category3">Category 3</option>
-              </select>
-          </div>
-          <div class="categories">
-            <h5 class="category-title">Product Categories</h5>
-            <div>
-              <ul>
-                @foreach ($categories as $category)
-                <li><a href="{{route('category.products',['slug'=>$category->slug])}}">{{$category->name}}</a></li>
-                  
-                @endforeach
-                <!-- <li><a href="#">Computing Products</a></li>
-                <li><a href="#">Computing Products</a></li>
-                <li><a href="#">Computing Products</a></li>
-                <li><a href="#">Computing Products</a></li> -->
-              </ul>
-            </div>                  
-          </div>
-        </div>
+        <!-- Categories -->
+          @livewire('category-nav-component')
         <!-- Products -->
         <div class="col-md-9"> 
           <div>
