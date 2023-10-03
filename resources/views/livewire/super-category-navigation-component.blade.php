@@ -147,12 +147,10 @@
 </style>
     <nav class="super-main-navbar">
       <ul class="list-container">
-            <li class="di_sup_cat">
-                
+            <li class="di_sup_cat">                
                 <a href="{{route('shop')}}">
                     Shop
-                </a>
-                
+                </a>                
             </li>
           @foreach ($supcategories as $supcategory)
               <li>

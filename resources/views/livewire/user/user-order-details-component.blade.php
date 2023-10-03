@@ -14,7 +14,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px 5px;
+            padding: 10px 5px;
         }
 
         header h2 {
@@ -23,6 +23,9 @@
 
         header a {
             font-size: 20px;
+        }
+        .user-header{
+            margin: 0 2%;
         }
 
         /* Main content styles */
@@ -109,8 +112,8 @@
             font-size: 16px;
         }
     </style>
-    <header>
-        <h2>{{$order->user->name}} Orders</h2>
+    <header class="user-header">
+        <h3 class="mb-0">{{$order->user->name}} Orders</h3>
         <a href="{{route('user.orders')}}">All My Orders</a>
     </header>
     <main>

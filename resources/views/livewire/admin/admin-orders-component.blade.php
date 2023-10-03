@@ -36,15 +36,30 @@
         /* Add a subtle hover effect */
         tr:hover {
             background-color: #ddd;
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
+            transform: scale(1);
+            transition: transform 0.2s ease;
         }
         .message {
             color:green;
         }
+        .admin-order-title{
+            margin: 1% 2%;
+            letter-spacing: .8px;
+            position: relative;
+            font-size: medium;
+        }
+        .admin-order-title::after{
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            left: 49%;
+        }
     </style>
-    <header>
-        <h1>Admin Orders</h1>
+    <header class="admin-order-title">
+        <h1 class="mb-0">Admin Orders</h1>
     </header>
 
     <main>
@@ -54,21 +69,19 @@
 
         <table>
             <thead>
-                <tr>
-                    <th>Order Id</th>
-                    <th>Date</th>
-                    <th>Total</th>
-                    <th>Name</th>
-                    <!-- <th>Shipping</th> -->
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Payment</th>
-                    <th>Action</th>
-                    <th>Status 2</th>
-                    <!-- <th>Action</th> -->
-                    <!-- <th>Status</th>
-                    <th>Status</th> -->
-                </tr>
+                <th>Order Id</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Name</th>
+                <!-- <th>Shipping</th> -->
+                <th>Email</th>
+                <th>Status</th>
+                <th>Payment</th>
+                <th>Action</th>
+                <th>Status 2</th>
+                <!-- <th>Action</th> -->
+                <!-- <th>Status</th>
+                <th>Status</th> -->
             </thead>
             <tbody>
                 @foreach($orders as $order)
@@ -89,8 +102,8 @@
                         <td><a href="{{route('admin.orderdetails',['order_id'=>$order->id])}}">details</a></td>
                         <td class="py-2 px-4">
                             <ul>
-                                <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'delivered')">Delivered</a></li>
-                                <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Cancel</a></li>
+                                <li><a href="#" class="text-success" wire:click.prevent="updateOrderStatus({{$order->id}},'delivered')"><i class="fa-solid fa-truck"></i> Delivered</a></li>
+                                <li><a href="#" class="text-danger" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')"><i class="fa-solid fa-triangle-exclamation"></i> Cancel</a></li>
                             </ul>
                         </td>
                     </tr>
