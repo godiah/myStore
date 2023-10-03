@@ -7,6 +7,5 @@
             <sup>{{Cart::instance('cart')->count()}}</sup>
             Cart/Ksh.{{Cart::instance('cart')->total()}}
         @endif
-        
     </a>
 </div>
